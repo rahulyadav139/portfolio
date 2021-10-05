@@ -2,6 +2,8 @@
 
 :root {
     --primary-color: #1E40AF;
+    --secondary-color: #4B5563;
+    --tertiary-color: #F87171;
 }
 
 body {
@@ -74,4 +76,18 @@ body {
 .secondary-list {
     text-align: center;
     padding: 1rem;
+}
+ 
+.reset {
+    margin: 0rem;
+    border: 0rem;
+}
+
+.subject-heading {
+    color: var(--secondary-color);
+    padding: 0rem 0.5rem;
+}
+
+.blog-para {
+    padding: 0rem 1rem;
 }
