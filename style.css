@@ -91,3 +91,7 @@ body {
 .blog-para {
     padding: 0rem 1rem;
 }
+
+.tertiary-color {
+    color: var(--tertiary-color);
+}
