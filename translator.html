@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Translator | Rahul Yadav</title>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+
+    <script src="translation-app.js" type="text/javascript"></script>
+        
+    <style type="text/css">
+		body {
+			font-family: 'Permanent Marker', cursive;
+            max-height: 400px;
+            margin: auto;
+		}
+
+        nav {
+            text-align: center;
+            background-image: url("images/background-got.jpg");
+            background-position: center;
+        }
+
+        #div-nav {
+            color: white;
+            font-size: 2rem;
+            padding: 0.1rem;
+        }
+
+        #translate-input {
+            display: block;
+            width: 100%;
+            min-height: 5rem;
+            box-sizing: border-box;
+            margin-top: 1rem;
+            border: 1.5px black solid;
+            font-family: 'Permanent Marker', cursive; 
+            color: #F87171; 
+        }
+
+        #translate-output {
+            width: 100%;
+            border: 1.5px black solid;
+            min-height: 5rem;
+            margin-top: 1rem;
+            color: #F87171;
+        }
+
+        button {
+            display: block;
+            font-family: 'Permanent Marker', cursive;
+            margin-top: 1rem;
+            background-color: black;
+            color: white;
+            padding: 0.5rem;
+            font-size: large;
+        }
+
+        footer {
+            background-color: black;
+            
+        }
+        footer {
+            color: white;
+            font-size: x-large;
+            text-align: center;
+            margin-top: 1rem;
+            padding: 1rem;
+            bottom: 0;
+            position: fixed;
+            width: 100%;
+        }
+
+        footer p {
+            font-size: large;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        main {
+            max-width: 600px;
+            margin: auto;
+        
+        }
+	</style>
+</head>
+<body>
+    <nav>
+        <div id="div-nav"><h1 >Speak Valyrian!</h1></div>
+
+    </nav>
+
+    <main>
+        <textarea id="translate-input" placeholder="type what you want to translate in valyrian..."></textarea>
+        <button id="btn-translate">Translate to valyrian
+        </button>
+        <div id="translate-output"></div>
+    </main>
+
+    <footer>
+        <div>About</div>
+        <p>Are you a fan of game of thrones? Use the translator to convert your text from English to vayrian.</p>
+    </footer>
+
+</body>
+</html>
