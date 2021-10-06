@@ -95,3 +95,12 @@ body {
 .tertiary-color {
     color: var(--tertiary-color);
 }
+
+.project-list {
+    padding: 0rem 1rem;
+}
+
+.project-link {
+    color: var(--primary-color);
+}
+
