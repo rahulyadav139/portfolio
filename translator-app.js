@@ -5,7 +5,7 @@ var translationBtn = document.querySelector("#btn-translate");
 var serverUrl = "https://api.funtranslations.com/translate/valyrian.json";
 
 function getTranslationUrl(text) {
-    return serverUrl + "?" + "text" + text
+    return serverUrl + "?" + "text=" + text
 }
 
 function clickHandler() {
