@@ -115,7 +115,7 @@
         if (amount.value === "") {
         document.querySelector("#error").style.display = "block";
     } else {
-        var paymentUrl = "upi://pay?pa=paytmqr2810050501012zst74kyouk7@paytm&pn=Rahul%20Yadav&mc=5499&orgid=000000&paytmqr=2810050501012ZST74KYOUK7R&am="+amount.value
+        var paymentUrl = "upi://pay?pa=paytmqr2810050501012zst74kyouk7@paytm&pn=Rahul%20Yadav&mc=5499&mode=02&orgid=000000&paytmqr=2810050501012ZST74KYOUK7R&am="+amount.value
         document.querySelector("#btnConfirm").style.display = "none";
         document.querySelector("#userInput").style.display = "none";
         document.querySelector("#btnPay").style.display = "block";
