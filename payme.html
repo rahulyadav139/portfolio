@@ -97,9 +97,10 @@
     
     </style>
     <script>
-        if (Android.test(userAgent) = true){
+        if (/Android/.test(window.navigator.userAgent)){
             document.querySelector("#paymentMethods").style.display = "block";
             document.querySelector("#footer-image").style.display = "block";
+           
 
         }
     </script>
