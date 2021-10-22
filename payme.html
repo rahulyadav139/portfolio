@@ -115,10 +115,20 @@
     <button id="btnShare"><strong>Share to WhatsApp</strong></button>
     <h4 id="paymentMethods">Pay using any UPI enabled application</h4>
     <img id="footer-image" src="/images/upi-payments.png"/>
+    <ul>
+        <li><a><img src="/images/phonepe-logo.png"/> </a></li>
+        <li><a><img src="/images/google-pay.png"/> </a></li>
+        <li><a><img src="/images/Paytm_Logo.png"/> </a></li>
+        
+    </ul>
 </main>
 </body>
 <script>
     var amount = document.querySelector("#userInput")
+
+    if (/Android/.test(window.navigator.userAgent)==1){
+            document.querySelector("#paymentMethods").style.display = "block";
+            document.querySelector("#footer-image").style.display = "block";
 
    
     function clickHandler() {
@@ -166,10 +176,10 @@
         
     document.querySelector("#btnConfirm").addEventListener("click",clickHandler);
 
-    if (/Android/.test(window.navigator.userAgent)==1){
-            document.querySelector("#paymentMethods").style.display = "block";
-            document.querySelector("#footer-image").style.display = "block";
+    
            
+
+        } else {
 
         }
 </script>
