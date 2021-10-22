@@ -174,7 +174,7 @@
 <script>
     var amount = document.querySelector("#userInput")
 
-    if (/Android/.test(window.navigator.userAgent) !== 1) {
+    if (/Android/.test(window.navigator.userAgent) == 0) {
         document.querySelector("#paymentMethods").style.display = "block";
         document.querySelector("#footer-image").style.display = "block";
 
