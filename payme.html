@@ -119,7 +119,7 @@
         if (amount.value === "") {
         document.querySelector("#error").style.display = "block";
     } else {
-        var paymentUrl = "phonepe://upi/pay?pa=fcbize9ieno@freecharge&pn=Rahul%20Yadav&mc=5499&mode=02&orgid=000000&am="+amount.value+".00"
+        var paymentUrl = "paytm://upi/pay?pa=fcbize9ieno@freecharge&pn=Rahul%20Yadav&mc=5499&mode=02&orgid=000000&am="+amount.value+".00"
         document.querySelector("#btnConfirm").style.display = "none";
         document.querySelector("#userInput").style.display = "none";
         document.querySelector("#btnPay").style.display = "block";
