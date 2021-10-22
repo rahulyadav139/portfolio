@@ -95,14 +95,8 @@
             display: none;
         }
     
-    </style>
-    <script>
-        if (/Android/.test(window.navigator.userAgent)==1){
-            document.querySelector("#paymentMethods").style.display = "block";
-            document.querySelector("#footer-image").style.display = "block";
-           
-
-        }
+    
+        
     </script>
 </head>
 <body>
@@ -171,5 +165,12 @@
         }
         
     document.querySelector("#btnConfirm").addEventListener("click",clickHandler);
+
+    if (/Android/.test(window.navigator.userAgent)==1){
+            document.querySelector("#paymentMethods").style.display = "block";
+            document.querySelector("#footer-image").style.display = "block";
+           
+
+        }
 </script>
 </html>
