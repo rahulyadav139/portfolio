@@ -150,14 +150,13 @@
         <nav id="heading"><img id="my-image" src="images/me.jpg" /><br>
             <h1>RAHUL YADAV</h1>
         </nav>
-        <div id="pay"><input id="userInput" type="number" placeholder="Enter amount..." />
+        <div id="pay"><input id="amount-input" type="number" placeholder="Enter amount..." />
+            <input id="note-input" type="text" placeholder="Transaction note(optional)..." />
             <h3 id="confirm-msg"></h3>
-            <button id="btnConfirm"><strong>Confirm</strong>
-            </button>
+            <button id="btnConfirm"><strong>Confirm</strong></button>
         </div>
 
-        <a id="btnPayLink" href="/" style="text-decoration: none;"><button id="btnPay"><strong>Pay Now</strong></button>
-            </div></a>
+        <a id="btnPayLink" href="/" style="text-decoration: none"><button id="btnPay"><strong>Pay Now</strong></button></a>
         <h5 id="error">Please enter a valid amount...</h5>
 
         <button id="btnShare"><strong>Share to WhatsApp</strong></button>
@@ -176,7 +175,8 @@
     </main>
 </body>
 <script>
-    var amount = document.querySelector("#userInput")
+    var amount = document.querySelector("#amount-input");
+    var transactionNote = document.querySelector("#note-input")
 
     if (/Android/.test(window.navigator.userAgent) == 0) {
         document.querySelector("#paymentMethods").style.display = "block";
@@ -187,9 +187,10 @@
             if (amount.value === "") {
                 document.querySelector("#error").style.display = "block";
             } else {
-                var paymentUrlAndroid = "upi://pay?pa=fcbize9ieno@freecharge&pn=Rahul%20Yadav&mc=5499&mode=02&orgid=000000&am=" + amount.value
+                var paymentUrlAndroid = "upi://pay?pa=fcbize9ieno@freecharge&pn=Rahul%20Yadav&tn="+transactionNote.value+"&mc=5499&mode=02&orgid=000000&am=" + amount.value
                 document.querySelector("#btnConfirm").style.display = "none";
-                document.querySelector("#userInput").style.display = "none";
+                document.querySelector("#amount-input").style.display = "none";
+                document.querySelector("#note-input").style.display = "none";
                 document.querySelector("#btnPay").style.display = "block";
                 document.querySelector("#confirm-msg").style.display = "block";
                 document.querySelector("#confirm-msg").innerHTML = "You are paying ₹" + amount.value;
@@ -212,7 +213,7 @@
 
                 function shareText() {
 
-                    var shareUrl = "whatsapp://send?phone=918435435659&text=Hey Rahul, I have made the payment ₹" +
+                    var shareUrl = "whatsapp://send?phone=918435435659&text=Hey Rahul, I have made the payment of ₹" +
                         amount.value + ". Please confirm. If is there any issue, let me know."
                     window.open(shareUrl)
 
@@ -239,12 +240,13 @@
             if (amount.value === "") {
                 document.querySelector("#error").style.display = "block";
             } else {
-                var paymentUrlIos = "://upi/pay?pa=fcbize9ieno@freecharge&pn=Rahul%20Yadav&mc=5499&mode=02&orgid=000000&am=" + amount.value
+                var paymentUrlIos = "://upi/pay?pa=fcbize9ieno@freecharge&pn=Rahul%20Yadav&tn="+transactionNote.value+"&mc=5499&mode=02&orgid=000000&am=" + amount.value
                 var paytmLink = "paytmmp" + paymentUrlIos;
                 var gpayLink = "gpay" + paymentUrlIos;
                 var phonepeLink = "phonepe" + paymentUrlIos;
                 document.querySelector("#btnConfirm").style.display = "none";
-                document.querySelector("#userInput").style.display = "none";
+                document.querySelector("#amount-input").style.display = "none";
+                document.querySelector("#note-input").style.display = "none";
                 document.querySelector("#iosLinks").style.display = "block";
                 document.querySelector("#paymentMethodsIos").style.display = "block";
 
@@ -268,7 +270,7 @@
 
                 function shareText() {
 
-                    var shareUrl = "whatsapp://send?phone=918435435659&text=Hey Rahul, I have made the payment ₹" +
+                    var shareUrl = "whatsapp://send?phone=918435435659&text=Hey Rahul, I have made the payment of ₹" +
                         amount.value + ". Please confirm. If is there any issue, let me know."
                     window.open(shareUrl)
 
