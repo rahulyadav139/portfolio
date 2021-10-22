@@ -136,6 +136,10 @@
         #paymentMethodsIos {
             display: none;
         }
+
+        #linkPhonePe, #linkPaytm, #linkGpay {
+            text-decoration: none;
+        }
     </style>
 
 </head>
@@ -231,6 +235,7 @@
 
     } else {
         function clickHandler() {
+            console.log("test")
             if (amount.value === "") {
                 document.querySelector("#error").style.display = "block";
             } else {
@@ -239,6 +244,7 @@
                 var gpayLink = "gpay" + paymentUrlIos;
                 var phonepeLink = "phonepe" + paymentUrlIos;
                 document.querySelector("#btnConfirm").style.display = "none";
+                document.querySelector("#userInput").style.display = "none";
                 document.querySelector("#iosLinks").style.display = "block";
                 document.querySelector("#paymentMethodsIos").style.display = "block";
 
@@ -277,6 +283,7 @@
 
 
         }
+        document.querySelector("#btnConfirm").addEventListener("click", clickHandler);
 
     }
 </script>
