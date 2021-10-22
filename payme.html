@@ -106,7 +106,7 @@
     <a id="btnPayLink" href="/" style="text-decoration: none;"><button id="btnPay"><strong>Pay Now</strong></button></div></a>
     <h5 id="error">Please enter a valid amount...</h5>
     
-    <button id="btnShare"><strong>Share</strong></button>
+    <button id="btnShare"><strong>Share to WhatsApp</strong></button>
     <h4 id="paymentMethods">Pay using any UPI enabled application</h4>
     <img id="footer-image" src="/images/upi-payments.png"/>
 </main>
@@ -142,7 +142,7 @@
         }
         setTimeout(thankYou,9000)
         function shareText() {
-            window.open("whatsapp://send?phone=918435435659&text=Hey Rahul, I have made the payment. Please confirm. If is there any issue, let me know.")
+            window.open("whatsapp://send?phone=918435435659&text=Hey Rahul, I have made the payment of ₹"+amount.value". Please confirm. If is there any issue, let me know.")
         
     }
         
