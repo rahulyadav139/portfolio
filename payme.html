@@ -87,6 +87,9 @@
             color: red;
             display: none;
         }
+        #btnShare {
+            display: none;
+        }
     
     </style>
 </head>
@@ -103,7 +106,8 @@
     <a id="btnPayLink" href="/" style="text-decoration: none;"><button id="btnPay"><strong>Pay Now</strong></button></div></a>
     <h5 id="error">Please enter a valid amount...</h5>
     
-    <h4>Pay using any UPI enabled application</h4>
+    <button id="btnShare"><strong>Share</strong></button>
+    <h4 id="paymentMethods">Pay using any UPI enabled application</h4>
     <img id="footer-image" src="/images/upi-payments.png"/>
 </main>
 </body>
@@ -123,12 +127,44 @@
         document.querySelector("#confirm-msg").innerHTML = "You are paying ₹"+amount.value;
         document.querySelector("#btnPayLink").setAttribute("href",paymentUrl)
         document.querySelector("#error").style.display = "none";
+
+        function thankYou() {
+            document.querySelector("#btnConfirm").style.display = "none";
+        document.querySelector("#userInput").style.display = "none";
+        document.querySelector("#btnPay").style.display = "none";
+        document.querySelector("#confirm-msg").style.display = "block";
+        document.querySelector("#confirm-msg").innerHTML = "Thankyou for payment!";
+        document.querySelector("#error").style.display = "none";
+        document.querySelector("#paymentMethods").style.display = "none";
+        document.querySelector("#footer-image").style.display = "none";
+        document.querySelector("#btnShare").style.display = "block";
+            
+        }
+        setTimeout(thankYou,9000)
+        function shareText() {
+        if (navigator.share) {
+  navigator.share({
+    
+    text: "Hey Rahul, I have made the payment of ₹"+amount.value+". Please confirm. And if it is there any issue let me know.",
+    
+  })
+    .then(() => console.log('Successful share'))
+    .catch((error) => console.log('Error sharing', error));
+}
+
+        
     }
         
-        
+    
+    document.querySelector("#btnShare").addEventListener("click",shareText) 
         
         
     }
+    
+            
+            
+        }
+        
     document.querySelector("#btnConfirm").addEventListener("click",clickHandler);
 </script>
 </html>
