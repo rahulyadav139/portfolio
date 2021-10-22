@@ -8,11 +8,13 @@ var availableNotes = [2000, 500, 100, 50, 20, 10, 5, 1]
 
 function clickHandler() {
 
-   
-    if (billAmount.value > 0) {
-        if (cashAmount.value > billAmount.value) {
 
-            var changeAmount = cashAmount.value - billAmount.value;
+    console.log(cashAmount.value>billAmount.value)
+   
+    if (number(billAmount.value) > 0) {
+        if (number(cashAmount.value) > number(billAmount.value) {
+
+            var changeAmount = number(cashAmount.value-billAmount.value);
 
             changeCalculator(changeAmount);
 
