@@ -87,7 +87,7 @@
             color: #1E3A8A;
         }
 
-        #btnPay,
+        
         #confirm-msg {
             display: none;
         }
@@ -158,8 +158,7 @@
             <input id="amount-input" type="number" placeholder="Enter amount..." />
             <input id="note-input" type="text" placeholder="Transaction note(optional)..." />
             <h3 id="confirm-msg"></h3>
-            <button id="btnConfirm"><strong>Confirm</strong></button>
-            <a id="btnPayLink" href="/" style="text-decoration: none"><button id="btnPay"><strong>Pay Now</strong></button></a>
+            <a id="btnPayLink" href="" style="text-decoration: none"><button id="btnPay"><strong>Pay Now</strong></button></a>
         </div>
 
 
@@ -181,7 +180,7 @@
     var amount = document.querySelector("#amount-input");
     var transactionNote = document.querySelector("#note-input")
 
-    if (/Android/.test(window.navigator.userAgent) == 1) {
+    if (/Android/.test(window.navigator.userAgent) == 0) {
         document.querySelector("#paymentMethods").style.display = "block";
         document.querySelector("#footer-image").style.display = "block";
 
@@ -190,20 +189,20 @@
             if (amount.value === "") {
                 document.querySelector("#error").style.display = "block";
             } else {
-                var paymentUrlAndroid = "upi://pay?pa=fcbize9ieno@freecharge&pn=Rahul%20Yadav&tn=" + transactionNote
-                    .value + "&mc=5499&mode=02&orgid=000000&am=" + amount.value
-                document.querySelector("#btnConfirm").style.display = "none";
+                var paymentUrlAndroid = "upi://pay?pa=fcbize9ieno@freecharge&pn=Rahul%20Yadav&tn=" + transactionNote.value + "&mc=5499&mode=02&orgid=000000&am=" + amount.value
+                
                 document.querySelector("#amount-input").style.display = "none";
                 document.querySelector("#note-input").style.display = "none";
-                document.querySelector("#btnPay").style.display = "block";
-                document.querySelector("#confirm-msg").style.display = "block";
-                document.querySelector("#confirm-msg").innerHTML = "You are paying ₹" + amount.value;
-                document.querySelector("#btnPayLink").setAttribute("href", paymentUrlAndroid)
+                
+                
+                
+                
                 document.querySelector("#error").style.display = "none";
 
-                function thankYou() {
+                function payNow() {
 
 
+                    document.querySelector("#btnPayLink").setAttribute("href", paymentUrlAndroid)
                     
                     document.querySelector("#btnPay").style.display = "none";
                     document.querySelector("#confirm-msg").style.display = "block";
@@ -214,7 +213,7 @@
                     document.querySelector("#btnShare").style.display = "block";
 
                 }
-                setTimeout(thankYou, 9000)
+                setTimeout(payNow, 1000)
 
                 function shareText() {
 
@@ -236,7 +235,7 @@
 
         }
 
-        document.querySelector("#btnConfirm").addEventListener("click", clickHandler);
+        document.querySelector("#btnPay").addEventListener("click", clickHandler);
 
 
 
