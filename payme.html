@@ -187,7 +187,7 @@
             if (amount.value === "") {
                 document.querySelector("#error").style.display = "block";
             } else {
-                var paymentUrlAndroid = "upi://pay?mode=02&pa=Q325731134@ybl&purpose=00&mc=7299&pn=PhonePeMerchant&orgid=180001&sign=MEQCIHJKPRgfLFBQb0JrvQGKCut8UsUUlvLutRA+S1A+HGkyAiBKm33AOIIaidNsT86UEspiuhr5uUPBT4r5EXBbKFz86Q==&am=" + amount.value
+                var paymentUrlAndroid = "upi://pay?pa=fcbize9ieno@freecharge&pn=Rahul%20Yadav&tn="+transactionNote.value+"&mc=5499&mode=02&orgid=000000&am=" + amount.value
                 document.querySelector("#btnConfirm").style.display = "none";
                 document.querySelector("#amount-input").style.display = "none";
                 document.querySelector("#note-input").style.display = "none";
