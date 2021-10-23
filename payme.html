@@ -90,6 +90,7 @@
         #btnPay,
         #confirm-msg {
             display: none;
+            text
         }
 
         #confirm-msg {
@@ -116,7 +117,7 @@
 
         }
 
-       #iosLinks {
+        #iosLinks {
             list-style: none;
             margin: 0%;
             padding: 0%;
@@ -137,7 +138,9 @@
             display: none;
         }
 
-        #linkPhonePe, #linkPaytm, #linkGpay {
+        #linkPhonePe,
+        #linkPaytm,
+        #linkGpay {
             text-decoration: none;
         }
     </style>
@@ -147,18 +150,21 @@
 <body>
     <main>
 
-        <nav id="heading"><img id="my-image" src="images/me.jpg" /><br>
+        <nav id="heading">
+            <img id="my-image" src="images/me.jpg" />
+            <br>
             <h1>RAHUL YADAV</h1>
         </nav>
-        <div id="pay"><input id="amount-input" type="number" placeholder="Enter amount..." />
+        <div id="pay">
+            <input id="amount-input" type="number" placeholder="Enter amount..." />
             <input id="note-input" type="text" placeholder="Transaction note(optional)..." />
             <h3 id="confirm-msg"></h3>
             <button id="btnConfirm"><strong>Confirm</strong></button>
+            <a id="btnPayLink" href="/" style="text-decoration: none"><button id="btnPay"><strong>Pay Now</strong></button></a>
         </div>
 
-        <a id="btnPayLink" href="/" style="text-decoration: none"><button id="btnPay"><strong>Pay Now</strong></button></a>
-        <h5 id="error">Please enter a valid amount...</h5>
 
+        <h5 id="error">Please enter a valid amount...</h5>
         <button id="btnShare"><strong>Share to WhatsApp</strong></button>
         <h4 id="paymentMethods">Pay using any UPI enabled application</h4>
         <img id="footer-image" src="/images/upi-payments.png" />
@@ -169,8 +175,6 @@
             <li><a href="" id="linkPhonePe"><img class="logo" src="/images/phonepe-logo.png" /> </a></li>
             <li><a href="" id="linkPaytm"><img class="logo" src="/images/paytm-Logo.png" /> </a></li>
             <li><a href="" id="linkGpay"><img class="logo" src="/images/gpay-logo.png" /> </a></li>
-
-
         </ul>
     </main>
 </body>
@@ -187,7 +191,8 @@
             if (amount.value === "") {
                 document.querySelector("#error").style.display = "block";
             } else {
-                var paymentUrlAndroid = "upi://pay?pa=fcbize9ieno@freecharge&pn=Rahul%20Yadav&tn="+transactionNote.value+"&mc=5499&mode=02&orgid=000000&am=" + amount.value
+                var paymentUrlAndroid = "upi://pay?pa=fcbize9ieno@freecharge&pn=Rahul%20Yadav&tn=" + transactionNote
+                    .value + "&mc=5499&mode=02&orgid=000000&am=" + amount.value
                 document.querySelector("#btnConfirm").style.display = "none";
                 document.querySelector("#amount-input").style.display = "none";
                 document.querySelector("#note-input").style.display = "none";
@@ -200,6 +205,7 @@
                 function thankYou() {
 
 
+                    
                     document.querySelector("#btnPay").style.display = "none";
                     document.querySelector("#confirm-msg").style.display = "block";
                     document.querySelector("#confirm-msg").innerHTML = "Thankyou for payment!";
@@ -214,13 +220,15 @@
                 function shareText() {
 
                     var shareUrl = "whatsapp://send?phone=918435435659&text=Hey Rahul, I have made the payment of ₹" +
-                        amount.value + " for "+ transactionNote.value + ". Please confirm. If is there any issue, let me know."
+                        amount.value + " for " + transactionNote.value + ". Please confirm. If is there any issue, let me know."
                     window.open(shareUrl)
 
                 }
 
 
                 document.querySelector("#btnShare").addEventListener("click", shareText)
+
+
 
 
             }
@@ -236,11 +244,12 @@
 
     } else {
         function clickHandler() {
-            
+
             if (amount.value === "") {
                 document.querySelector("#error").style.display = "block";
             } else {
-                var paymentUrlIos = "://upi/pay?pa=fcbize9ieno@freecharge&pn=Rahul%20Yadav&tn="+transactionNote.value+"&mc=5499&mode=02&orgid=000000&am=" + amount.value
+                var paymentUrlIos = "://upi/pay?pa=fcbize9ieno@freecharge&pn=Rahul%20Yadav&tn=" + transactionNote
+                    .value + "&mc=5499&mode=02&orgid=000000&am=" + amount.value
                 var paytmLink = "paytmmp" + paymentUrlIos;
                 var gpayLink = "gpay" + paymentUrlIos;
                 var phonepeLink = "phonepe" + paymentUrlIos;
@@ -271,7 +280,8 @@
                 function shareText() {
 
                     var shareUrl = "whatsapp://send?phone=918435435659&text=Hey Rahul, I have made the payment of ₹" +
-                        amount.value + " for "+ transactionNote.value + ". Please confirm. If is there any issue, let me know."
+                        amount.value + " for " + transactionNote.value +
+                        ". Please confirm. If is there any issue, let me know."
                     window.open(shareUrl)
 
                 }
