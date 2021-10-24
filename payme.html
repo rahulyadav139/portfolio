@@ -70,7 +70,7 @@
             background-color: #1E3A8A;
             font-weight: bold;
             font-size: medium;
-            
+
 
         }
 
@@ -135,7 +135,7 @@
             text-decoration: none;
         }
 
-        
+
 
         #btn-no {
             background-color: white;
@@ -194,7 +194,7 @@
         <button class="symmetry btn-click" id="btn-yes">Yes</button>
         <button class="symmetry btn-click" id="btn-share">Share to WhatsApp</button>
 
-        <h5 id="error">Please enter a valid amount...</h5>
+        <h5 id="error"></h5>
 
         <h4 id="payment-method-msg">Pay using any UPI enabled application</h4>
         <img id="footer-image" src="/images/upi-payments.png" />
@@ -231,6 +231,7 @@
         function clickHandler() {
             if (amount.value === "") {
                 errorMsg.style.display = "block";
+                errorMsg.innerHTML = "Please enter a valid amount"
             } else {
                 var paymentUrl = "upi://pay?pa=fcbize9ieno@freecharge&pn=Rahul%20Yadav&tn=" + transactionNote
                     .value + "&mc=5499&mode=02&orgid=000000&am=" + amount.value
@@ -286,42 +287,18 @@
     } else {
 
 
+
         function clickHandler() {
 
             if (amount.value === "") {
                 errorMsg.style.display = "block";
+                errorMsg.innerHTML = "Please enter a valid amount"
             } else {
 
 
                 var paymentOptions = document.getElementsByName("payment-option");
 
-                for (i = 0; i < paymentOptions.length; i++) {
-                    if (paymentOptions[i].checked) {
-                        if (paymentOptions[i].value === "phonepe") {
-                            var paymentUrl = "phonepe://upi/pay?pa=fcbize9ieno@freecharge&pn=Rahul%20Yadav&tn=" +
-                                transactionNote.value + "&mc=5499&mode=02&orgid=000000&am=" + amount.value
-                        }
-
-                        if (paymentOptions[i].value === "paytm") {
-                            var paymentUrl = "paytmmp://upi/pay?pa=fcbize9ieno@freecharge&pn=Rahul%20Yadav&tn=" +
-                                transactionNote.value + "&mc=5499&mode=02&orgid=000000&am=" + amount.value
-                        }
-
-                        if (paymentOptions[i].value === "gpay") {
-                            var paymentUrl = "gpay://upi/pay?pa=fcbize9ieno@freecharge&pn=Rahul%20Yadav&tn=" +
-                                transactionNote.value + "&mc=5499&mode=02&orgid=000000&am=" + amount.value
-                        }
-                    }
-                }
-
-                
-
-
-
-                setTimeout(payNow => window.location.href = paymentUrl, 50)
-
-
-                setTimeout(successfulPayment => {
+                function successfulPayment() {
                     amount.style.display = "none";
                     transactionNote.style.display = "none";
                     msg.style.display = "block";
@@ -331,8 +308,69 @@
                     btnNo.style.display = "block"
                     choosePaymentMethodMsg.style.display = "none"
                     choosePaymentOption.style.display = "none"
-                    
-                }, 5000)
+                    errorMsg.style.display = "none";
+                }
+
+                function payNow() {
+                    window.location.href = paymentUrl;
+                    errorMsg.style.display = "none";
+                }
+
+                for (i = 0; i < paymentOptions.length; i++) {
+                    if (paymentOptions[i].checked) {
+                        if (paymentOptions[i].value === "phonepe") {
+                            var paymentUrl = "phonepe://upi/pay?pa=fcbize9ieno@freecharge&pn=Rahul%20Yadav&tn=" + transactionNote.value + "&mc=5499&mode=02&orgid=000000&am=" + amount.value
+
+                            this.appAvailability.check("phonepe://")
+                                .then(
+                                    (yes) => {
+                                        setTimeout(payNow, 50)
+                                        setTimeout(successfulPayment, 5000)
+                                    },
+                                    (no) => {errorMsg.style.display = "block"; 
+                                    errorMsg.innerHTML = "Application is not installed"
+                                }
+                                );
+
+
+
+                        }
+
+                        if (paymentOptions[i].value === "paytm") {
+                            var paymentUrl = "paytmmp://upi/pay?pa=fcbize9ieno@freecharge&pn=Rahul%20Yadav&tn=" + transactionNote.value + "&mc=5499&mode=02&orgid=000000&am=" + amount.value
+                                this.appAvailability.check("paytmmp://")
+                                .then(
+                                    (yes) => {
+                                        setTimeout(payNow, 50)
+                                        setTimeout(successfulPayment, 5000)
+                                    },
+                                    (no) => {errorMsg.style.display = "block"; 
+                                    errorMsg.innerHTML = "Application is not installed"
+                                }
+                                );
+                        }
+
+                        if (paymentOptions[i].value === "gpay") {
+                            var paymentUrl = "gpay://upi/pay?pa=fcbize9ieno@freecharge&pn=Rahul%20Yadav&tn=" + transactionNote.value + "&mc=5499&mode=02&orgid=000000&am=" + amount.value
+                                this.appAvailability.check("gpay://")
+                                .then(
+                                    (yes) => {
+                                        setTimeout(payNow, 50)
+                                        setTimeout(successfulPayment, 5000)
+                                    },
+                                    (no) => {errorMsg.style.display = "block"; 
+                                    errorMsg.innerHTML = "Application is not installed"
+                                }
+                                );
+                        }
+
+                    } else {
+
+                        errorMsg.style.display = "block";
+                        errorMsg.innerHTML = "Please choose a payment method"
+
+                    }
+                }
 
                 btnYes.addEventListener("click", ifYes => {
                     msg.innerHTML = "Thankyou for payment!";
@@ -359,6 +397,12 @@
 
         }
         btnPay.addEventListener("click", clickHandler);
+
+
+
+
+
+
 
     }
 </script>
