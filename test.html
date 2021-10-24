@@ -180,7 +180,7 @@
     var amount = document.querySelector("#amount-input");
     var transactionNote = document.querySelector("#note-input")
 
-    if (/Android/.test(window.navigator.userAgent) == 0) {
+    if (/Android/.test(window.navigator.userAgent) == 1) {
         document.querySelector("#paymentMethods").style.display = "block";
         document.querySelector("#footer-image").style.display = "block";
 
@@ -193,17 +193,14 @@
                 
                 document.querySelector("#amount-input").style.display = "none";
                 document.querySelector("#note-input").style.display = "none";
-                
-                
-                
-                
                 document.querySelector("#error").style.display = "none";
 
                 function payNow() {
-
-
-                    document.querySelector("#btnPayLink").setAttribute("href", paymentUrlAndroid)
+                    window.location.href = paymentUrlAndroid
                     
+                }
+                setTimeout(payNow, 1000)
+
                     document.querySelector("#btnPay").style.display = "none";
                     document.querySelector("#confirm-msg").style.display = "block";
                     document.querySelector("#confirm-msg").innerHTML = "Thankyou for payment!";
@@ -211,9 +208,6 @@
                     document.querySelector("#paymentMethods").style.display = "none";
                     document.querySelector("#footer-image").style.display = "none";
                     document.querySelector("#btnShare").style.display = "block";
-
-                }
-                setTimeout(payNow, 1000)
 
                 function shareText() {
 
