@@ -217,7 +217,7 @@
     var qrCode = document.getElementById("qrcode")
 
 
-    if (/Android/.test(window.navigator.userAgent) == 0) {
+    if (/Android/.test(window.navigator.userAgent) == 1) {
         paymentMethodMsg.style.display = "block";
         footerImage.style.display = "block";
         choosePaymentOption.style.display = "none"
@@ -372,7 +372,7 @@
         }
         btnPay.addEventListener("click", clickHandler);
 
-    } if (/iPhone|iPod/.test(window.navigator.userAgent) == 0 && /Android/.test(window.navigator.userAgent) == 0)
+    } if (/iPhone|iPod/.test(window.navigator.userAgent) == 0 && /Android/.test(window.navigator.userAgent) == 0) {
 
         paymentMethodMsg.style.display = "block";
         footerImage.style.display = "block";
