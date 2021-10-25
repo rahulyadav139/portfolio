@@ -6,11 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Linkpe | Rahul Yadav</title>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap" rel="stylesheet">
 
 
     <style>
+        :root {
+            --primary-color: #1E3A8A;
+            --secondary-color: white;
+            --tertiary-color: #F59E0B;
+        }
+
+        body,
+        .symmetry {
+            font-family: 'Zen Kurenaido', sans-serif;
+
+        }
+
         #my-image {
             background-repeat: no-repeat;
             background-position: 50%;
@@ -23,10 +34,8 @@
 
         nav {
             padding: 1rem;
-        }
-
-        #heading {
-            background-color: #1E3A8A;
+            display: flex;
+            background-color: var(--primary-color);
             border-radius: 1rem;
         }
 
@@ -34,44 +43,37 @@
             max-width: 450px;
             text-align: center;
             margin: auto;
-
         }
 
-        h1 {
-            color: white;
-            font-family: 'Oswald', sans-serif;
+        .text-nav {
             margin: 0rem;
+            color: var(--secondary-color);
         }
 
         .symmetry {
             display: block;
             margin: 2rem auto;
             border-radius: 2rem;
-            font-family: 'Open Sans', sans-serif;
             text-align: center;
-
         }
 
         .input-type {
-            border-color: #1E3A8A;
+            border-color: var(--primary-color);
             width: 250px;
             height: 40px;
             font-weight: bold;
             font-size: large;
-            color: #1E3A8A;
+            color: var(--primary-color);
         }
 
         .btn-click {
-
-            color: white;
+            color: var(--secondary-color);
             border-color: transparent;
             width: 250px;
             height: 50px;
-            background-color: #1E3A8A;
+            background-color: var(--primary-color);
             font-weight: bold;
             font-size: medium;
-
-
         }
 
         #footer-image {
@@ -81,66 +83,33 @@
         }
 
 
-        h4 {
-            font-family: 'Open Sans', sans-serif;
-            color: #1E3A8A;
+        .text-body {
+            color: var(--primary-color);
         }
 
-        #msg {
-            font-family: 'Open Sans', sans-serif;
-            color: #1E3A8A;
-            display: none;
-        }
-
-        h5 {
+        #error {
             color: red;
             display: none;
-            font-family: 'Open Sans', sans-serif;
         }
 
         .logo,
         .radio-inline {
             max-width: 50px;
             max-height: 5rem;
-
-        }
-
-        #ios-links {
-            list-style: none;
-            margin: 0%;
-            padding: 0%;
-
-
-        }
-
-        li {
-            display: inline;
-            padding: 1rem;
-            margin: 0%;
-            text-align: center;
-
-
         }
 
         #btn-yes,
         #btn-no,
         #btn-share,
-        #payment-method-msg {
+        #payment-method-msg,
+        #msg {
             display: none;
         }
 
-        #linkPhonePe,
-        #linkPaytm,
-        #linkGpay {
-            text-decoration: none;
-        }
-
-
-
         #btn-no {
-            background-color: white;
-            color: #1E3A8A;
-            border-color: #1E3A8A
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            border-color: var(--primary-color)
         }
 
         label {
@@ -153,6 +122,17 @@
         form {
             display: inline-block;
         }
+
+        #hero-image {
+            flex-wrap: wrap;
+            flex: 30%;
+        }
+
+        #hero-text {
+            flex-wrap: wrap;
+            flex: 80%;
+            text-align: left;
+        }
     </style>
 
 </head>
@@ -160,17 +140,25 @@
 <body>
     <main>
 
-        <nav id="heading">
-            <img id="my-image" src="images/me.jpg" />
-            <br>
-            <h1>RAHUL YADAV</h1>
+        <nav>
+
+            <div id="hero-text">
+                <h1 class="text text-nav">Welcome to <span style="color: #F59E0B;">LinkPe</span></h1>
+                <br>
+                <h5 class="text text-nav" style="color: var(--secondary-color); margin: 0rem;">Pay to :</h5>
+                <h3 class="text text-nav"><span style="color: #F59E0B;">Rahul</span> Yadav</h3>
+            </div>
+            <div id="hero-image">
+                <img id="my-image" src="images/me.jpg" />
+            </div>
+
         </nav>
 
         <input class="symmetry input-type" id="amount-input" type="number" placeholder="Amount" />
         <input class="symmetry input-type" id="note-input" type="text" placeholder="Transaction note" />
-        <h3 id="msg"></h3>
+        <h3 class="text text-body" id="msg"></h3>
 
-        <h4 id="choose-payment-method-msg">Choose a payment method</h4>
+        <h4 class="text text-body" id="choose-payment-method-msg">Choose a payment method</h4>
 
 
 
@@ -194,9 +182,9 @@
         <button class="symmetry btn-click" id="btn-yes">Yes</button>
         <button class="symmetry btn-click" id="btn-share">Share to WhatsApp</button>
 
-        <h5 id="error"></h5>
+        <h5 class="text" id="error"></h5>
 
-        <h4 id="payment-method-msg">Pay using any UPI enabled application</h4>
+        <h4 class="text text-body" id="payment-method-msg">Pay using any UPI enabled application</h4>
         <img id="footer-image" src="/images/upi-payments.png" />
 
 
@@ -319,7 +307,9 @@
                 for (i = 0; i < paymentOptions.length; i++) {
                     if (paymentOptions[i].checked) {
                         if (paymentOptions[i].value === "phonepe") {
-                            var paymentUrl = "phonepe://upi/pay?pa=fcbize9ieno@freecharge&pn=Rahul%20Yadav&mc=5499&mode=02&orgid=000000&am=" + amount.value
+                            var paymentUrl =
+                                "phonepe://upi/pay?pa=fcbize9ieno@freecharge&pn=Rahul%20Yadav&mc=5499&mode=02&orgid=000000&am=" +
+                                amount.value
 
                             setTimeout(payNow, 50)
                             setTimeout(successfulPayment, 5000)
@@ -377,12 +367,6 @@
 
         }
         btnPay.addEventListener("click", clickHandler);
-
-
-
-
-
-
 
     }
 </script>
