@@ -282,7 +282,7 @@
 
 
     }
-    if (/iPhone|iPod/.test(window.navigator.userAgent) == 1) {
+    if (/iPhone/.test(window.navigator.userAgent) == 1) {
 
         function clickHandler() {
 
@@ -291,7 +291,7 @@
                 errorMsg.innerHTML = "Please enter a valid amount"
             } else {
 
-                errorMsg.style.display = "block";
+                errorMsg.style.display = "none";
                
 
 
@@ -308,11 +308,13 @@
                     choosePaymentMethodMsg.style.display = "none"
                     choosePaymentOption.style.display = "none"
                     errorMsg.style.display = "none";
+                    qrCode.style.display = "none"
                 }
 
                 function payNow() {
                     window.location.href = paymentUrl;
                     errorMsg.style.display = "none";
+                    qrCode.style.display = "none"
                 }
 
                 for (i = 0; i < paymentOptions.length; i++) {
