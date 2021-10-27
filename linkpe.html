@@ -139,6 +139,7 @@
 
         #qrcode {
 
+            
             display: none;
 
         }
@@ -292,7 +293,7 @@
             } else {
 
                 errorMsg.style.display = "none";
-                qrCode.style.display = "none"
+                
                
 
 
@@ -308,14 +309,13 @@
                     btnNo.style.display = "block"
                     choosePaymentMethodMsg.style.display = "none"
                     choosePaymentOption.style.display = "none"
-                    errorMsg.style.display = "none";
-                    qrCode.style.display = "none"
+                    
                 }
 
                 function payNow() {
                     window.location.href = paymentUrl;
-                    errorMsg.style.display = "none";
-                    qrCode.style.display = "none"
+                    
+                    
                 }
 
                 for (i = 0; i < paymentOptions.length; i++) {
@@ -380,7 +380,7 @@
 
     } 
     
-    if (/iPhone|iPod/.test(window.navigator.userAgent) == 0 && /Android/.test(window.navigator.userAgent) == 0) {
+    if (/iPhone/.test(window.navigator.userAgent) == 0 && /Android/.test(window.navigator.userAgent) == 0) {
 
         paymentMethodMsg.style.display = "block";
         footerImage.style.display = "block";
