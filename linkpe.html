@@ -386,6 +386,7 @@
         footerImage.style.display = "block";
         choosePaymentOption.style.display = "none"
         choosePaymentMethodMsg.style.display = "none"
+        
 
         
 
@@ -405,6 +406,7 @@
                 msg.style.display = "block";
                 msg.innerHTML = "Please scan to pay";
                 qrCode.style.display = "inline-block";
+                errorMsg.style.display = "none";
 
 
                 var qrc = new QRCode(document.getElementById("qrcode"), {
