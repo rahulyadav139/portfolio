@@ -220,7 +220,217 @@
     var qrCode = document.getElementById("qrcode")
 
 
-    if (/Android/.test(window.navigator.userAgent) == 1) {
+    // if (/Android/.test(window.navigator.userAgent) == 1) {
+    //     paymentMethodMsg.style.display = "block";
+    //     footerImage.style.display = "block";
+    //     choosePaymentOption.style.display = "none"
+    //     choosePaymentMethodMsg.style.display = "none"
+
+
+
+    //     function clickHandler() {
+    //         if (amount.value === "") {
+    //             errorMsg.style.display = "block";
+    //             errorMsg.innerHTML = "Please enter a valid amount"
+    //         } else {
+    //             var paymentUrl = "upi://pay?pa=fcbize9ieno@freecharge&pn=Rahul%20Yadav&tn=" + transactionNote
+    //                 .value + "&mc=5499&mode=02&orgid=000000&am=" + amount.value
+
+
+    //             errorMsg.style.display = "none";
+                
+
+
+    //             setTimeout(payNow => window.location.href = paymentUrl, 10)
+
+
+    //             setTimeout(successfulPayment => {
+    //                 amount.style.display = "none";
+    //                 transactionNote.style.display = "none";
+    //                 msg.style.display = "block";
+    //                 msg.innerHTML = "Payment successful?";
+    //                 btnPay.style.display = "none"
+    //                 btnYes.style.display = "block"
+    //                 btnNo.style.display = "block"
+    //                 paymentMethodMsg.style.display = "none";
+    //                 footerImage.style.display = "none";
+    //             }, 5000)
+
+    //             btnYes.addEventListener("click", ifYes => {
+    //                 msg.innerHTML = "Thankyou for payment!";
+    //                 btnYes.style.display = "none";
+    //                 btnNo.style.display = "none";
+    //                 btnShare.style.display = "block";
+    //                 var shareUrl =
+    //                     "whatsapp://send?phone=918435435659&text=Hey Rahul, I have made the payment of ₹" +
+    //                     amount.value + " for " + transactionNote.value +
+    //                     ". Please confirm. If is there any issue, let me know."
+
+    //                 btnShare.addEventListener("click", share => window.open(shareUrl))
+
+    //             })
+
+    //             btnNo.addEventListener("click", ifNo => {
+    //                 window.location.reload()
+
+    //             })
+
+    //         }
+
+    //     }
+
+    //     btnPay.addEventListener("click", clickHandler);
+
+
+    // }
+    // if (/iPhone/.test(window.navigator.userAgent) == 1) {
+    //     console.log("test")
+
+    //     function clickHandler() {
+
+    //         console.log("iphone test")
+
+    //         if (amount.value === "") {
+    //             errorMsg.style.display = "block";
+    //             errorMsg.innerHTML = "Please enter a valid amount"
+    //         } else {
+
+    //             errorMsg.style.display = "none";
+                
+               
+
+
+    //             var paymentOptions = document.getElementsByName("payment-option");
+
+    //             function successfulPayment() {
+    //                 amount.style.display = "none";
+    //                 transactionNote.style.display = "none";
+    //                 msg.style.display = "block";
+    //                 msg.innerHTML = "Payment successful?";
+    //                 btnPay.style.display = "none"
+    //                 btnYes.style.display = "block"
+    //                 btnNo.style.display = "block"
+    //                 choosePaymentMethodMsg.style.display = "none"
+    //                 choosePaymentOption.style.display = "none"
+                    
+    //             }
+
+    //             function payNow() {
+    //                 window.location.href = paymentUrl;
+    //                 errorMsg.style.display = "none";
+                    
+                    
+    //             }
+
+    //             for (i = 0; i < paymentOptions.length; i++) {
+    //                 if (paymentOptions[i].checked) {
+    //                     if (paymentOptions[i].value === "phonepe") {
+    //                         var paymentUrl =
+    //                             "phonepe://upi/pay?pa=fcbize9ieno@freecharge&pn=Rahul%20Yadav&mc=5499&mode=02&orgid=000000&am=" +
+    //                             amount.value
+
+    //                         setTimeout(payNow, 10)
+    //                         setTimeout(successfulPayment, 5000)
+
+    //                     }
+
+    //                     if (paymentOptions[i].value === "paytm") {
+    //                         var paymentUrl = "paytmmp://upi/pay?pa=fcbize9ieno@freecharge&pn=Rahul%20Yadav&tn=" +
+    //                             transactionNote.value + "&mc=5499&mode=02&orgid=000000&am=" + amount.value
+
+    //                         setTimeout(payNow, 10)
+    //                         setTimeout(successfulPayment, 5000)
+    //                     }
+
+    //                     if (paymentOptions[i].value === "gpay") {
+    //                         var paymentUrl = "gpay://upi/pay?pa=fcbize9ieno@freecharge&pn=Rahul%20Yadav&tn=" +
+    //                             transactionNote.value + "&mc=5499&mode=02&orgid=000000&am=" + amount.value
+
+    //                         setTimeout(payNow, 10)
+    //                         setTimeout(successfulPayment, 5000)
+    //                     }
+
+    //                 } else {
+
+    //                     errorMsg.style.display = "block";
+    //                     errorMsg.innerHTML = "Please choose a payment method"
+
+    //                 }
+    //             }
+
+    //             btnYes.addEventListener("click", ifYes => {
+    //                 msg.innerHTML = "Thankyou for payment!";
+    //                 btnYes.style.display = "none";
+    //                 btnNo.style.display = "none";
+    //                 btnShare.style.display = "block";
+    //                 var shareUrl =
+    //                     "whatsapp://send?phone=918435435659&text=Hey Rahul, I have made the payment of ₹" +
+    //                     amount.value + " for " + transactionNote.value +
+    //                     ". Please confirm. If is there any issue, let me know."
+
+    //                 btnShare.addEventListener("click", share => window.open(shareUrl))
+
+    //             })
+
+    //             btnNo.addEventListener("click", ifNo => {
+    //                 window.location.reload()
+
+    //             })
+
+    //         }
+
+    //     }
+        
+    //     btnPay.addEventListener("click", clickHandler);
+
+    // } 
+    
+    if (/iPhone/.test(window.navigator.userAgent) == 0 && /Android/.test(window.navigator.userAgent) == 0) {
+
+        paymentMethodMsg.style.display = "block";
+        footerImage.style.display = "block";
+        choosePaymentOption.style.display = "none";
+        choosePaymentMethodMsg.style.display = "none";
+        
+
+        function clickHandler() {
+
+            
+
+            if (amount.value === "") {
+                errorMsg.style.display = "block";
+                errorMsg.innerHTML = "Please enter a valid amount"
+            } else {
+
+                var paymentUrl = "upi://pay?pa=fcbize9ieno@freecharge&pn=Rahul%20Yadav&tn=" + transactionNote
+                    .value + "&mc=5499&mode=02&orgid=000000&am=" + amount.value
+
+                amount.style.display = "none";
+                transactionNote.style.display = "none";
+                btnPay.style.display = "none";
+                msg.style.display = "block";
+                msg.innerHTML = "Please scan to pay";
+                qrCode.style.display = "inline-block";
+                errorMsg.style.display = "none";
+
+
+                var qrc = new QRCode(document.getElementById("qrcode"), {
+                    text: paymentUrl,
+                    width: 200,
+                    height: 200,
+                    colorDark: "#000000",
+                    colorLight: "#ffffff",
+                    correctLevel: QRCode.CorrectLevel.H
+                });
+
+            }
+
+        }
+
+        btnPay.addEventListener("click", clickHandler)
+    } else {
+
+        if (/Android/.test(window.navigator.userAgent) == 1) {
         paymentMethodMsg.style.display = "block";
         footerImage.style.display = "block";
         choosePaymentOption.style.display = "none"
@@ -282,13 +492,14 @@
         btnPay.addEventListener("click", clickHandler);
 
 
-    }
-    if (/iPhone/.test(window.navigator.userAgent) == 1) {
-        console.log("test")
+    } else {
+
+        
+        
 
         function clickHandler() {
 
-            console.log("iphone test")
+            
 
             if (amount.value === "") {
                 errorMsg.style.display = "block";
@@ -380,59 +591,14 @@
             }
 
         }
+        
         btnPay.addEventListener("click", clickHandler);
 
-    } 
     
-    if (/iPhone/.test(window.navigator.userAgent) == 0) {
-        if (/Android/.test(window.navigator.userAgent) == 0) {
 
-        paymentMethodMsg.style.display = "block";
-        footerImage.style.display = "block";
-        choosePaymentOption.style.display = "none"
-        choosePaymentMethodMsg.style.display = "none"
+    }
 
-        
-        
-
-        
-
-        function clickHandler() {
-
-            console.log("pc test")
-
-            if (amount.value === "") {
-                errorMsg.style.display = "block";
-                errorMsg.innerHTML = "Please enter a valid amount"
-            } else {
-
-                var paymentUrl = "upi://pay?pa=fcbize9ieno@freecharge&pn=Rahul%20Yadav&tn=" + transactionNote
-                    .value + "&mc=5499&mode=02&orgid=000000&am=" + amount.value
-
-                amount.style.display = "none";
-                transactionNote.style.display = "none";
-                btnPay.style.display = "none";
-                msg.style.display = "block";
-                msg.innerHTML = "Please scan to pay";
-                qrCode.style.display = "inline-block";
-                errorMsg.style.display = "none";
-
-
-                var qrc = new QRCode(document.getElementById("qrcode"), {
-                    text: paymentUrl,
-                    width: 200,
-                    height: 200,
-                    colorDark: "#000000",
-                    colorLight: "#ffffff",
-                    correctLevel: QRCode.CorrectLevel.H
-                });
-
-            }
-
-        }
-
-        btnPay.addEventListener("click", clickHandler)
-    }}
+    }
 </script>
 
 </html>
