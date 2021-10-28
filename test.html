@@ -105,11 +105,13 @@
         #btn-yes,
         #btn-no,
         #btn-share,
-        #choose-payment,
         #choose-payment-method-msg,
-        #qrcode #msg {
+        #qrcode,
+        #msg,
+        #choose-payment {
             display: none;
         }
+
 
         #btn-no {
             background-color: var(--secondary-color);
@@ -121,10 +123,7 @@
             float: left;
             padding: 0 1em;
             text-align: center;
-        }
-
-        form {
-            display: inline-block;
+        
         }
 
         #hero-image {
@@ -228,7 +227,8 @@
         paymentMethodMsg.style.display = "none";
         footerImage.style.display = "none";
         choosePaymentMethodMsg.style.display = "block";
-        choosePaymentOption.style.display = "block";
+        choosePaymentOption.style.display = "inline-block";
+        
     }
 
 
