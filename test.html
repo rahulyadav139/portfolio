@@ -333,11 +333,13 @@
                         btnNo.style.display = "block"
                         choosePaymentMethodMsg.style.display = "none"
                         choosePaymentOption.style.display = "none"
+                        errorMsg.style.display = "none";
 
                     }
 
                     function payNow() {
                         window.location.href = paymentUrl;
+                        errorMsg.style.display = "none";
 
                     }
 
