@@ -277,8 +277,9 @@
                     footerImage.style.display = "none";
                     errorMsg.style.display = "none";
 
-                    var paymentUrl = "upi://pay?pa=bharatpe09902046019@yesbankltd&pn=Rahul%20Yadav&tn=" + transactionNote
-                        .value + "&mc=5499&mode=02&orgid=000000&am=" + amount.value
+                    var paymentUrl =
+                        "upi://pay?pa=BHARATPE09902046019@yesbankltd&pn=BharatPe Merchant&cu=INR&tr=WHATSAPP_QR&tn=" +
+                        transactionNote.value + "&mc=5499&mode=02&orgid=000000&am=" + amount.value
 
 
                     setTimeout(payNow => window.location.href = paymentUrl, 10)
@@ -323,7 +324,7 @@
                 if (/iPhone/.test(window.navigator.userAgent) == 1) {
 
 
-                   
+
 
                     function successfulPayment() {
                         amount.style.display = "none";
@@ -357,7 +358,8 @@
                             }
 
                             if (paymentOptions[i].value === "paytm") {
-                                var paymentUrl = "paytmmp://upi/pay?pa=bharatpe09902046019@yesbankltd&pn=Rahul%20Yadav&tn=" +
+                                var paymentUrl =
+                                    "paytmmp://upi/pay?pa=bharatpe09902046019@yesbankltd&pn=Rahul%20Yadav&tn=" +
                                     transactionNote.value + "&mc=5499&mode=02&orgid=000000&am=" + amount.value
 
                                 setTimeout(payNow, 10)
@@ -365,7 +367,8 @@
                             }
 
                             if (paymentOptions[i].value === "gpay") {
-                                var paymentUrl = "gpay://upi/pay?pa=bharatpe09902046019@yesbankltd&pn=Rahul%20Yadav&tn=" +
+                                var paymentUrl =
+                                    "gpay://upi/pay?pa=bharatpe09902046019@yesbankltd&pn=Rahul%20Yadav&tn=" +
                                     transactionNote.value + "&mc=5499&mode=02&orgid=000000&am=" + amount.value
 
                                 setTimeout(payNow, 10)
