@@ -12,7 +12,7 @@ function calculator(costPrice, sellingPrice) {
   if (costPrice>sellingPrice) {
     var loss = costPrice - sellingPrice
     var lossPercentage = (loss/costPrice) * 100
-    message = "Hey the loss is " + loss + " and the loss percentage is " + lossPercentage + "%."
+    message = "Hey! the loss is " + loss + " and the loss percentage is " + lossPercentage.toFixed(2) + "%."
     output(message)
     
     console.log(lossPercentage)
@@ -20,7 +20,7 @@ function calculator(costPrice, sellingPrice) {
     var profit = sellingPrice - costPrice
     var profitPercentage = (profit/costPrice) * 100
 
-    message = "Hey the profit is " + profit + " and the loss percentage is " + profitPercentage + "%."
+    message = "Hey! the profit is " + profit + " and the loss percentage is " + profitPercentage.toFixed(2) + "%."
     output(message)
    
   } else {
