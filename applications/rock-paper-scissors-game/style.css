@@ -35,11 +35,16 @@ body {
   cursor: pointer;
 }
 
-#compInput {
+.main__bet-output {
   color: #5b21b6;
   margin-top: 20px;
+  display: none;
 }
 
+#compInput {
+  background-color: #5b21b6;
+  color: white;
+}
 #msg {
   font-size: 25px;
 }

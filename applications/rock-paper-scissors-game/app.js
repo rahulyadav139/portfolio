@@ -1,6 +1,7 @@
 const compInput = document.getElementById('compInput');
 const inputBet = document.querySelectorAll('.main__input');
 const msg = document.querySelector('#msg');
+const mainBetOutput = document.querySelector('.main__bet-output');
 
 const randomRoll = function (e) {
   const myBet = e.target.getAttribute('value');
@@ -24,7 +25,8 @@ const randomRoll = function (e) {
     msg.style.color = '#F87171';
   }
 
-  compInput.textContent = `Computer's bet: ${compBet.toUpperCase()}`;
+  mainBetOutput.style.display = 'block';
+  compInput.textContent = `_${compBet.toUpperCase()}_`;
 };
 
 inputBet.forEach(el => el.addEventListener('click', randomRoll));
