@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Shippori Antique', sans-serif;
+  margin: 0;
+}
+
+.hero__nav {
+  background-color: #5b21b6;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+.main {
+  text-align: center;
+}
+.main__game-intro {
+  color: #5b21b6;
+  font-weight: bold;
+}
+
+.main__input {
+  padding: 10px;
+  margin: 8px;
+  color: inherit;
+  background-color: #5b21b6;
+  color: white;
+  border-color: transparent;
+  border-radius: 18px;
+  font-size: 15px;
+  min-width: 100px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#compInput {
+  color: #5b21b6;
+  margin-top: 20px;
+}
