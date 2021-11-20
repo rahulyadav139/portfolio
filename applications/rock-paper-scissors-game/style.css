@@ -39,3 +39,7 @@ body {
   color: #5b21b6;
   margin-top: 20px;
 }
+
+#msg {
+  font-size: 25px;
+}
