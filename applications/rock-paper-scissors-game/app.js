@@ -15,13 +15,13 @@ const randomRoll = function (e) {
     (compBet === 'Paper' && myBet === 'Scissors') ||
     (compBet === 'Scissors' && myBet === 'Rock')
   ) {
-    msg.textContent = 'You won!🎉';
+    msg.textContent = 'You win!🎉';
     msg.style.color = '#059669';
   } else if (compBet === myBet) {
     msg.textContent = 'This match is a draw!🙃';
     msg.style.color = '#5b21b6';
   } else {
-    msg.textContent = 'You lost!😬';
+    msg.textContent = 'You lose!😬';
     msg.style.color = '#F87171';
   }
 

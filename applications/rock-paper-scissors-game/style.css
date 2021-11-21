@@ -13,6 +13,11 @@ body {
   text-align: center;
   color: white;
 }
+
+.hero__nav__game-title {
+  color: #d97706;
+  font-size: 40px;
+}
 .main {
   text-align: center;
 }
@@ -33,6 +38,12 @@ body {
   min-width: 100px;
   font-weight: bold;
   cursor: pointer;
+}
+
+.main__input:focus {
+  background-color: white;
+  color: #5b21b6;
+  border: solid 1.5px #5b21b6;
 }
 
 .main__bet-output {
