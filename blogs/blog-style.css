@@ -1,0 +1,29 @@
+.main {
+  flex: none;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.section-projects {
+  display: none;
+}
+.section-intro {
+  display: block;
+  height: 100%;
+  flex: none;
+  width: 100vw;
+  background-color: white;
+  color: black;
+  padding: 2rem;
+  padding-left: 8rem;
+}
+.nav {
+  position: fixed;
+  left: 0;
+  height: 100vh;
+  /* display: none; */
+}
+.section-intro a {
+  text-decoration: none;
+  color: #fbbf24;
+}

@@ -1,0 +1,48 @@
+.section-intro,
+.section-projects {
+  padding: 2rem;
+}
+.button-live-project {
+  display: none;
+}
+
+.project {
+  display: block;
+  margin: 0.35rem;
+  background-color: black;
+  color: white;
+  font-family: inherit;
+  outline: none;
+  border: none;
+  font-size: 0.9rem;
+}
+.project:hover,
+.project:active {
+  border-bottom: 1px solid #fbbf24;
+  cursor: pointer;
+}
+
+label:target {
+  border-bottom: 1px white solid;
+  cursor: pointer;
+}
+
+.btn {
+  display: inline-block;
+}
+
+@media (max-width: 40rem) {
+  .section-intro,
+  .section-projects {
+    padding: 2rem;
+  }
+  .section-intro {
+    height: 60vh;
+  }
+  .section-intro h1 {
+    margin: 00.5rem;
+  }
+  .section-projects {
+    height: 40vh;
+  }
+}
