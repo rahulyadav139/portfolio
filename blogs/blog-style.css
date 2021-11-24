@@ -20,6 +20,7 @@ body {
   padding: 2rem;
   /* padding-left: 8rem; */
   background-color: #fffbeb;
+  /* scroll-behavior: smooth; */
 }
 
 /* .section-intro::-webkit-scrollbar {

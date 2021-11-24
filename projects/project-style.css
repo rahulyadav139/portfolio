@@ -1,20 +1,47 @@
 .section-intro,
 .section-projects {
-  padding: 2rem;
+  padding: 3rem;
+  padding-top: 0;
 }
+.section-intro {
+  padding-left: 5rem;
+  overflow: scroll;
+  /* padding-top: 0; */
+}
+
 .button-live-project {
   display: none;
+}
+.section-intro__subtitle {
+  margin: 0;
+  margin-top: 2rem;
+  padding: 2rem 0;
+}
+.project-list-title {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: black;
+  color: #fbbf24;
 }
 
 .project {
   display: block;
-  margin: 0.35rem;
+  margin: 0.3rem;
   background-color: black;
   color: white;
   font-family: inherit;
   outline: none;
   border: none;
-  font-size: 0.9rem;
+  font-size: 1.5rem;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: white;
 }
 .project:hover,
 .project:active {
