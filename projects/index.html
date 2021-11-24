@@ -14,8 +14,11 @@
     <main class="main">
       <nav class="nav">
         <ul class="nav__links">
-          <a href="/index.html"><li class="nav__link">Home</li></a>
-          <a href="/blogs/index.html"><li class="nav__link">Blog</li></a>
+          <li class="nav__link"><a href="/index.html">Home</a></li>
+          <li class="nav__link btn-project-list">
+            <a href="/projects/index.html">Projects</a>
+          </li>
+          <li class="nav__link"><a href="/blogs/index.html">Blog</a></li>
         </ul>
         <ul class="nav__networks">
           <li class="nav__network">
@@ -169,6 +172,7 @@
       </nav>
       <div class="section-intro">
         <h1>PROJECTS</h1>
+        <div class="project-list"></div>
 
         <button id="p1" class="project">↪ Portfolio</button>
         <button id="p2" class="project">↪ How well do you know me?</button>
@@ -192,14 +196,18 @@
         <h3 class="section-projects__project-description">
           let's play a game. You know rock paper scissors game.
         </h3>
-        <a
-          href="https://rahulmyadav.netlify.app/applications/rock-paper-scissors-game/game.html"
-          ><button class="btn button-live-project">Live Project</button></a
-        >
-        <a
-          href="https://github.com/rahulyadav139/portfolio/tree/main/applications/rock-paper-scissors-game"
-          ><button class="btn button-source-code">Source Code</button></a
-        >
+        <button class="btn button-live-project">
+          <a
+            href="https://rahulmyadav.netlify.app/applications/rock-paper-scissors-game/game.html"
+            >Live Project</a
+          >
+        </button>
+        <button class="btn button-source-code">
+          <a
+            href="https://github.com/rahulyadav139/portfolio/tree/main/applications/rock-paper-scissors-game"
+            >Source Code</a
+          >
+        </button>
       </div>
     </main>
   </body>

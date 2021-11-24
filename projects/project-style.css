@@ -22,13 +22,9 @@
   cursor: pointer;
 }
 
-label:target {
-  border-bottom: 1px white solid;
-  cursor: pointer;
-}
-
 .btn {
   display: inline-block;
+  margin-right: 1rem;
 }
 
 @media (max-width: 40rem) {
