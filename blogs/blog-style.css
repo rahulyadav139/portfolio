@@ -1,3 +1,6 @@
+body {
+  background-color: #f3f4f6;
+}
 .main {
   flex: none;
   display: block;
@@ -9,14 +12,20 @@
 }
 .section-intro {
   display: block;
-  height: 100%;
+  margin: auto;
   flex: none;
-  width: 100vw;
+  width: 70vw;
   background-color: white;
   color: black;
   padding: 2rem;
-  padding-left: 8rem;
+  /* padding-left: 8rem; */
+  background-color: #fffbeb;
 }
+
+/* .section-intro::-webkit-scrollbar {
+  display: none;
+  -ms-overflow-style: none;
+} */
 .nav {
   position: fixed;
   left: 0;
