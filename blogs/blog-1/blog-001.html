@@ -4,10 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Blog</title>
 
     <link rel="stylesheet" href="/style.css" />
     <link rel="stylesheet" href="/blogs/blog-style.css" />
+    <link rel="stylesheet" href="/blogs/blog-1/blog-1-style.css" />
     <script defer src="/portfolio-app.js"></script>
   </head>
   <body>
@@ -173,41 +174,6 @@
         </ul>
       </nav>
       <div class="section-intro">
-        <div><h2 class="subject-heading">Digital payments in India.</h2></div>
-        <p class="blog-para">
-          Paying for a hotel room with a credit card, getting a new TV on a
-          debit card, or paying for vegetables on the street via a mobile
-          wallet: digital payments are omnipresent in the everyday life of
-          Indians and have dramatically changed consumer behavior in the
-          country. Many innovative FinTech companies as well as governmental
-          initiatives have shaped the market in recent years...<span
-            ><a class="link tertiary-color" href="/blogs/digital-payment.html"
-              >Read More</a
-            ></span
-          >
-        </p>
-
-        <hr />
-        <div>
-          <h2 class="subject-heading">Artificial Intelligence in future.</h2>
-        </div>
-        <p class="blog-para">
-          With the continuous development in science and technology, it is hard
-          to estimate how far and what else we will be able to establish.
-          According to experts, the future of the world seems to be dominated by
-          Artificial Intelligence. And the time is assumed to be not far when
-          almost every aspect of our life involves AI assistance in some way or
-          the other...<span
-            ><a
-              class="link tertiary-color"
-              href="/blogs/artificial-intelligence.html"
-              >Read More</a
-            ></span
-          >
-        </p>
-
-        <hr />
-
         <div>
           <h2 class="subject-heading">
             Find smallest integer that have 'n' numbers of factors.
@@ -218,11 +184,51 @@
           is divisible by let say another number 'b' then we say number 'b' is a
           factor of number 'a'. Since prime number is only divisible by '1' or
           number itself so they have only 2 factors. so every integer has more
-          than two factors except prime number and '1'...<span
-            ><a class="link tertiary-color" href="/blogs/blog-1/blog-001.html"
-              >Read More</a
-            ></span
-          >
+          than two factors except prime number and '1'.
+        </p>
+        <p class="blog-para">
+          What is the factors of a number? Let say a number 'a'. if number 'a'
+          is divisible by let say another number 'b' then we say number 'b' is a
+          factor of number 'a'. Since prime number is only divisible by '1' or
+          number itself so they have only 2 factors. so every integer has more
+          than two factors except prime number and '1'.
+        </p>
+        <div class="blog-image">
+          <img src="/blogs/blog-1/images/blog-image-1.png" />
+        </div>
+        <p class="blog-para">
+          So when one operand is fully divisible by second operand it gives zero
+          remainder. and we can conclude that second operand is the factor of
+          first operand. For finding total factors of a number we need to divide
+          all the number from 1 to till that number and check how many numbers
+          between 1 to that number get 0 remainder. For it we can use for-loop
+          which starts from 1 to that number.
+        </p>
+        <div class="blog-image">
+          <img src="/blogs/blog-1/images/blog-image-2.png" />
+        </div>
+        <p>
+          That's how we can find factors of a number. But what is we set factors
+          first and find a number that have that number of factors. For which we
+          need to find a way to increase 'givenNumber' (which is not predefined
+          and set 1 initially ) automatically and check 'factors' value is exact
+          that we defined.
+        </p>
+        <p>
+          You guess the right way we need another loop. Let say we use for-loop
+          again for increment but we don't know we will be final value of
+          counter (in this case 'givenNumber'). We cannot use for-loop. so we
+          are going to use while-loop. So what will be the breaking point of
+          while-loop? We are going to break while loop we get desired number of
+          factors.
+        </p>
+        <div class="blog-image">
+          <img src="/blogs/blog-1/images/blog-image-3.png" />
+        </div>
+        <p>
+          So that's how we get smallest integer that have specified number of
+          factors. We use for-loop and while-loop. For-loop for finding factors
+          and While-loop for counter increment.
         </p>
 
         <hr />
