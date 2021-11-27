@@ -1,6 +1,6 @@
 .section-intro {
   padding: 0 5rem;
-  color: white;
+  color: var(--tertiary-color);
 }
 .section-projects {
   padding: 0 5rem;
@@ -23,8 +23,8 @@
   position: sticky;
   top: 0;
   z-index: 10;
-  background-color: black;
-  color: #fbbf24;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 .project:hover,

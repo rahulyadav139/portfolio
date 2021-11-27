@@ -37,8 +37,7 @@ body {
 
 .section-intro,
 .section-projects {
-  flex-basis: 45%;
-  flex: 48%;
+  flex-basis: 48%;
 }
 
 .nav__links,
