@@ -64,9 +64,6 @@ body {
   margin: 3rem 0;
   text-align: center;
 }
-.nav__network {
-  margin: 0.5rem;
-}
 
 .section-intro {
   padding: 1rem;
@@ -134,4 +131,21 @@ body {
 }
 ::-webkit-scrollbar-thumb {
   background: white;
+}
+
+.nav__network {
+  margin: 0.5rem;
+}
+.nav__network svg:hover {
+  animation: rotate-links 0.25s ease-out 10ms 2 forwards;
+  fill: var(--tertiary-color);
+}
+
+@keyframes rotate-links {
+  from {
+    transform: scale(1.3);
+  }
+  to {
+    transform: scale(1);
+  }
 }
