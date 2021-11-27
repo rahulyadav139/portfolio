@@ -94,9 +94,10 @@ body {
 }
 .section-projects__image {
   margin: auto;
-  width: 70%;
-  height: 70%;
+  width: 50%;
+  height: 50%;
   vertical-align: middle;
+  margin-top: 5rem;
 }
 .section-projects__image svg {
   width: 100%;
