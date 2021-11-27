@@ -32,3 +32,19 @@
   text-decoration: underline var(--primary-color);
   cursor: pointer;
 }
+
+@media (max-width: 40rem) {
+  .section-intro {
+    order: 1;
+    flex-basis: 100%;
+    padding: 0 2rem;
+  }
+  .project {
+    font-size: 1rem;
+  }
+  .section-projects {
+    padding: 2rem;
+    flex-basis: 35%;
+    font-size: 0.8rem;
+  }
+}

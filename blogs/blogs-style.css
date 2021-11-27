@@ -29,3 +29,44 @@
   outline: none;
   height: 1.5px;
 }
+
+@media (max-width: 400rem) {
+  .section-intro {
+    flex-basis: 100%;
+    padding: 3rem;
+    font-size: 1.5rem;
+  }
+  .section-projects {
+    position: fixed;
+    bottom: 0;
+    opacity: 0;
+  }
+  .close {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: inherit;
+    background-color: transparent;
+    outline: none;
+    font-size: 1.5rem;
+    /* border: transparent; */
+    /* text-decoration: underline; */
+  }
+
+  .btn-up {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+    background-color: transparent;
+    border: transparent;
+  }
+  .btn-up svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .main {
+    padding: 0;
+  }
+}

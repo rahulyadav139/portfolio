@@ -141,11 +141,56 @@ body {
   fill: var(--tertiary-color);
 }
 
+.btn-up {
+  display: none;
+}
 @keyframes rotate-links {
   from {
     transform: scale(1.3);
   }
   to {
     transform: scale(1);
+  }
+}
+
+@media (max-width: 40rem) {
+  .main {
+    flex-flow: column;
+    width: 100vw;
+  }
+
+  .nav {
+    flex-flow: row;
+  }
+  .nav__links {
+    margin-left: 0.5rem;
+  }
+  .nav__network {
+    display: inline-block;
+  }
+
+  .nav__link {
+    transform: rotateZ(0deg);
+    margin: 0;
+    text-align: center;
+    display: inline-block;
+    padding: 0.3rem;
+  }
+
+  .section-intro,
+  .section-projects {
+    padding: 2rem;
+  }
+  .section-intro__intro-text {
+    font-size: 1.5rem;
+  }
+  .section-intro__name {
+    font-size: 2rem;
+  }
+  .section-intro__about {
+    font-size: 1rem;
+  }
+  .btn a {
+    font-size: 1rem;
   }
 }

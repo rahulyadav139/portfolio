@@ -162,6 +162,9 @@ const projectDes = document.querySelector(
 );
 const btnLiveProject = document.querySelector('.button-live-project');
 const btnSourceCode = document.querySelector('.button-source-code');
+const btnUp = document.querySelector('.btn-up');
+const blogList = document.querySelector('.section-projects');
+const close = document.querySelector('.close');
 
 window.addEventListener('load', () => {
   projects.map(el =>
@@ -195,3 +198,13 @@ function clickHandler() {
 }
 
 setTimeout(clickHandler, 1000);
+
+btnUp.addEventListener('click', () => {
+  blogList.style.opacity = 100;
+  btnUp.style.opacity = 0;
+});
+
+close.addEventListener('click', () => {
+  blogList.style.opacity = 0;
+  btnUp.style.opacity = 100;
+});
