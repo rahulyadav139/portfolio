@@ -200,11 +200,11 @@ function clickHandler() {
 setTimeout(clickHandler, 1000);
 
 btnUp.addEventListener('click', () => {
-  blogList.style.opacity = 100;
-  btnUp.style.opacity = 0;
+  blogList.style.display = 'block';
+  btnUp.style.display = 'none';
 });
 
 close.addEventListener('click', () => {
-  blogList.style.opacity = 0;
-  btnUp.style.opacity = 100;
+  blogList.style.display = 'none';
+  btnUp.style.display = 'block';
 });

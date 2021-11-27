@@ -39,7 +39,7 @@
   .section-projects {
     position: fixed;
     bottom: 0;
-    opacity: 0;
+    display: none;
   }
   .close {
     position: absolute;
