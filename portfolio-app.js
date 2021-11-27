@@ -155,8 +155,7 @@ const projects = [
 
 //code
 
-const btnProjects = document.querySelectorAll('.project');
-const projectDetailsContainer = document.querySelector('.section-projects');
+const projectList = document.querySelector('.projects');
 const projectName = document.querySelector('.section-projects__project-name');
 const projectDes = document.querySelector(
   '.section-projects__project-description'
@@ -164,21 +163,35 @@ const projectDes = document.querySelector(
 const btnLiveProject = document.querySelector('.button-live-project');
 const btnSourceCode = document.querySelector('.button-source-code');
 
-btnProjects.forEach(el =>
-  el.addEventListener('click', e => {
-    const projectCode = e.target.id;
-    const slectedProject = projects.find(el => el.code === projectCode);
+window.addEventListener('load', () => {
+  projects.map(el =>
+    projectList.insertAdjacentHTML(
+      'beforeend',
+      `<li id="${el.code}" class="project">↪ ${el.projectName}</li>`
+    )
+  );
+});
 
-    projectName.textContent = slectedProject.projectName;
-    projectDes.textContent = slectedProject.projectDescription;
+function clickHandler() {
+  const projectItem = document.querySelectorAll('.project');
+  projectItem.forEach(el =>
+    el.addEventListener('click', e => {
+      const projectCode = e.target.id;
+      const slectedProject = projects.find(el => el.code === projectCode);
 
-    if (e.target.id === 'p1') {
-      btnLiveProject.style.display = 'none';
-    } else {
-      btnLiveProject.style.display = 'inline-block';
-    }
+      projectName.textContent = slectedProject.projectName;
+      projectDes.textContent = slectedProject.projectDescription;
 
-    btnLiveProject.children[0].setAttribute('href', slectedProject.liveLink);
-    btnSourceCode.children[0].setAttribute('href', slectedProject.sourceCode);
-  })
-);
+      if (e.target.id === 'p1') {
+        btnLiveProject.style.display = 'none';
+      } else {
+        btnLiveProject.style.display = 'inline-block';
+      }
+
+      btnLiveProject.children[0].setAttribute('href', slectedProject.liveLink);
+      btnSourceCode.children[0].setAttribute('href', slectedProject.sourceCode);
+    })
+  );
+}
+
+setTimeout(clickHandler, 1000);

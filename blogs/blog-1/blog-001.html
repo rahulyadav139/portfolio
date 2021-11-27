@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog</title>
+    <title>Home | Rahul Yadav</title>
 
-    <link rel="stylesheet" href="/style.css" />
-    <link rel="stylesheet" href="/blogs/blog-style.css" />
+    <link rel="stylesheet" href="/shared-style.css" />
+    <link rel="stylesheet" href="/blogs/blogs-style.css" />
     <link rel="stylesheet" href="/blogs/blog-1/blog-1-style.css" />
     <script defer src="/portfolio-app.js"></script>
   </head>
@@ -15,18 +15,23 @@
     <main class="main">
       <nav class="nav">
         <ul class="nav__links">
-          <li class="nav__link"><a href="/index.html">Home</a></li>
-          <li class="nav__link btn-project-list">
-            <a href="/projects/index.html">Projects</a>
+          <li class="nav__link">
+            <a href="/index.html">Home</a>
           </li>
           <li class="nav__link">
-            <a style="color: white" href="/blogs/index.html">Blog</a>
+            <a href="/projects/index.html">Projects</a>
+          </li>
+          <li class="nav__link active-page">
+            <a href="/blogs/blog-1/blog-001.html">Blog</a>
           </li>
         </ul>
         <ul class="nav__networks">
           <li class="nav__network">
-            <a href="https://github.com/rahulyadav139">
-              <svg
+            <a
+              no-referrer
+              target="_blank"
+              href="https://github.com/rahulyadav139"
+              ><svg
                 version="1.1"
                 id="Capa_1"
                 xmlns="http://www.w3.org/2000/svg"
@@ -81,7 +86,11 @@
             ></a>
           </li>
           <li class="nav__network">
-            <a href="https://www.linkedin.com/in/rahulyadav139">
+            <a
+              no-referrer
+              target="_blank"
+              href="https://www.linkedin.com/in/rahulyadav139"
+            >
               <svg
                 version="1.1"
                 id="Capa_1"
@@ -128,7 +137,11 @@
             ></a>
           </li>
           <li class="nav__network">
-            <a href="https://twitter.com/rahulyadav139">
+            <a
+              no-referrer
+              target="_blank"
+              href="https://twitter.com/rahulyadav139"
+            >
               <svg
                 version="1.1"
                 id="Capa_1"
@@ -174,11 +187,10 @@
         </ul>
       </nav>
       <div class="section-intro">
-        <div>
-          <h2 class="subject-heading">
-            Find smallest integer that have 'n' numbers of factors.
-          </h2>
-        </div>
+        <h2 class="subject-heading">
+          Find smallest integer that have 'n' numbers of factors.
+        </h2>
+        <hr />
         <p class="blog-para">
           What is the factor of a number? Let say a number 'a'. if number 'a' is
           divisible by let say another number 'b' then we say number 'b' is a
@@ -229,10 +241,27 @@
           factors. We use for-loop and while-loop. For-loop for finding factors
           and While-loop for counter increment.
         </p>
-
         <hr />
       </div>
-      <div class="section-projects"></div>
+      <div class="section-projects">
+        <h3>Blogs</h3>
+        <hr />
+        <ul class="blogs-list">
+          <li class="blog-title">
+            <a href="/blogs/digital-payment.html">Digital payments in India.</a>
+          </li>
+          <li class="blog-title">
+            <a href="/blogs/artificial-intelligence.html"
+              >Artificial Intelligence in future.</a
+            >
+          </li>
+          <li class="blog-title">
+            <a href="/blogs/blog-1/blog-001.html"
+              >Find smallest integer that have 'n' numbers of factors.</a
+            >
+          </li>
+        </ul>
+      </div>
     </main>
   </body>
 </html>

@@ -1,0 +1,34 @@
+.section-intro {
+  padding: 0 5rem;
+  color: white;
+}
+.section-projects {
+  padding: 0 5rem;
+}
+.projects {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.project {
+  font-size: 1.5rem;
+}
+
+.section-intro {
+  overflow: scroll;
+}
+
+.project-list-title {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: black;
+  color: #fbbf24;
+}
+
+.project:hover,
+.project:active {
+  text-decoration: underline var(--primary-color);
+  cursor: pointer;
+}

@@ -1,0 +1,35 @@
+.nav {
+  flex-basis: 4%;
+}
+
+.section-intro {
+  flex-basis: 76%;
+  padding: 2rem 5rem;
+  color: black;
+  background-color: #f3f4f6;
+  overflow: scroll;
+}
+.section-projects {
+  flex-basis: 20%;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-color);
+}
+
+.blogs-list {
+  list-style: square;
+  padding: 0.3rem;
+  margin: 0;
+}
+
+.blog-title a {
+  text-decoration: underline var(--secondary-color);
+  color: var(--secondary-color);
+}
+.section-projects hr {
+  border: 0;
+  background: var(--secondary-color);
+  outline: none;
+  height: 1.5px;
+}

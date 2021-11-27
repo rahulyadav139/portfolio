@@ -4,26 +4,33 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Home | Rahul Yadav</title>
 
-    <link rel="stylesheet" href="/style.css" />
-    <link rel="stylesheet" href="/projects/project-style.css" />
+    <link rel="stylesheet" href="/shared-style.css" />
+    <link rel="stylesheet" href="/projects/projects-style.css" />
     <script defer src="/portfolio-app.js"></script>
   </head>
   <body>
     <main class="main">
       <nav class="nav">
         <ul class="nav__links">
-          <li class="nav__link"><a href="/index.html">Home</a></li>
-          <li class="nav__link btn-project-list">
-            <a style="color: white" href="/projects/index.html">Projects</a>
+          <li class="nav__link">
+            <a href="/index.html">Home</a>
           </li>
-          <li class="nav__link"><a href="/blogs/index.html">Blog</a></li>
+          <li class="nav__link active-page">
+            <a href="/projects/index.html">Projects</a>
+          </li>
+          <li class="nav__link">
+            <a href="/blogs/blog-1/blog-001.html">Blog</a>
+          </li>
         </ul>
         <ul class="nav__networks">
           <li class="nav__network">
-            <a href="https://github.com/rahulyadav139">
-              <svg
+            <a
+              no-referrer
+              target="_blank"
+              href="https://github.com/rahulyadav139"
+              ><svg
                 version="1.1"
                 id="Capa_1"
                 xmlns="http://www.w3.org/2000/svg"
@@ -78,7 +85,11 @@
             ></a>
           </li>
           <li class="nav__network">
-            <a href="https://www.linkedin.com/in/rahulyadav139">
+            <a
+              no-referrer
+              target="_blank"
+              href="https://www.linkedin.com/in/rahulyadav139"
+            >
               <svg
                 version="1.1"
                 id="Capa_1"
@@ -125,7 +136,11 @@
             ></a>
           </li>
           <li class="nav__network">
-            <a href="https://twitter.com/rahulyadav139">
+            <a
+              no-referrer
+              target="_blank"
+              href="https://twitter.com/rahulyadav139"
+            >
               <svg
                 version="1.1"
                 id="Capa_1"
@@ -172,24 +187,7 @@
       </nav>
       <div class="section-intro">
         <h1 class="project-list-title section-intro__subtitle">Projects</h1>
-        <div class="project-list">
-          <button id="p1" class="project">↪ Portfolio</button>
-          <button id="p2" class="project">↪ How well do you know me?</button>
-          <button id="p3" class="project">↪ General knowledge quiz</button>
-          <button id="p4" class="project">↪ Minionese</button>
-          <button id="p5" class="project">↪ Country flag</button>
-          <button id="p6" class="project">↪ Fun translator</button>
-          <button id="p7" class="project">↪ Emoji interpreter</button>
-          <button id="p8" class="project">↪ Racipebook</button>
-          <button id="p9" class="project">↪ Rock paper scissors</button>
-          <button id="p10" class="project">↪ Cash register manager</button>
-          <button id="p11" class="project">↪ Is your birthday lucky?</button>
-          <button id="p12" class="project">↪ Learn triangles</button>
-          <button id="p13" class="project">↪ Leap Year Identifier</button>
-          <button id="p14" class="project">↪ Profit loss calculator</button>
-          <button id="p15" class="project">↪ Palindrome birthdays</button>
-          <button id="p16" class="project">↪ Emoji interpreter 2.0</button>
-        </div>
+        <ul class="projects"></ul>
       </div>
       <div class="section-projects">
         <h1 class="section-projects__project-name section-intro__subtitle">
