@@ -161,20 +161,18 @@ body {
 
   .nav {
     flex-flow: row;
+    padding: 0 0.5rem;
   }
+
+  .nav__networks,
   .nav__links {
-    margin-left: 0.5rem;
-  }
-  .nav__network {
-    display: inline-block;
+    display: flex;
   }
 
   .nav__link {
     transform: rotateZ(0deg);
-    margin: 0;
+    margin: 0 0.3rem;
     text-align: center;
-    display: inline-block;
-    padding: 0.3rem;
   }
 
   .section-intro,
