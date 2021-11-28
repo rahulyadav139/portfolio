@@ -6,3 +6,8 @@
 .blog-image img {
   width: 100%;
 }
+@media (max-width: 40rem) {
+  .blog-image {
+    width: 100%;
+  }
+}
