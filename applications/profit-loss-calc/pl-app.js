@@ -41,6 +41,16 @@ function output(message) {
 }
 
 function submitHandler() {
+  if (
+    !initialPrice.value ||
+    !currentPrice.value ||
+    !quantity.value ||
+    initialPrice.value < 0 ||
+    quantity.value < 0 ||
+    currentPrice.value < 0
+  )
+    return (outputBox.innerHTML = 'Invalid Input');
+
   var costPrice = initialPrice.value * quantity.value;
   var sellingPrice = currentPrice.value * quantity.value;
 

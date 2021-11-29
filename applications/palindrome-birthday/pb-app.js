@@ -210,27 +210,29 @@ var inputDate = document.querySelector('#input-date');
 
 function clickHandler() {
   if (!inputDate.value) msg.innerHTML = 'Invalid input';
-  var date = {
-    day: '',
-    month: '',
-    year: '',
-  };
-  var dateGiven = inputDate.value.split('-');
-  date.day = Number(dateGiven[2]);
-  date.month = Number(dateGiven[1]);
-  date.year = Number(dateGiven[0]);
+  else {
+    var date = {
+      day: '',
+      month: '',
+      year: '',
+    };
+    var dateGiven = inputDate.value.split('-');
+    date.day = Number(dateGiven[2]);
+    date.month = Number(dateGiven[1]);
+    date.year = Number(dateGiven[0]);
 
-  var nearestPalindromeDetails = nearbyPalindrome(date);
-  if (nearestPalindromeDetails[1] > 1) {
-    var inDayOrDays = 'days';
-  } else {
-    var inDayOrDays = 'day';
-  }
+    var nearestPalindromeDetails = nearbyPalindrome(date);
+    if (nearestPalindromeDetails[1] > 1) {
+      var inDayOrDays = 'days';
+    } else {
+      var inDayOrDays = 'day';
+    }
 
-  if (checkPalimdrome(date) == true) {
-    msg.innerHTML = 'Yeay! your birthday is a palindrome👏.';
-  } else {
-    msg.innerHTML = `Sorry! your birthday is not a palindrome. The nearest palindrome is ${nearestPalindromeDetails[0].day}-${nearestPalindromeDetails[0].month}-${nearestPalindromeDetails[0].year} and you miss it by ${nearestPalindromeDetails[1]} ${inDayOrDays}.`;
+    if (checkPalimdrome(date) == true) {
+      msg.innerHTML = 'Yeay! your birthday is a palindrome👏.';
+    } else {
+      msg.innerHTML = `Sorry! your birthday is not a palindrome. The nearest palindrome is ${nearestPalindromeDetails[0].day}-${nearestPalindromeDetails[0].month}-${nearestPalindromeDetails[0].year} and you miss it by ${nearestPalindromeDetails[1]} ${inDayOrDays}.`;
+    }
   }
 }
 
