@@ -23,6 +23,10 @@
   text-decoration: underline var(--secondary-color);
   color: var(--secondary-color);
 }
+.blog-title a:hover {
+  color: var(--tertiary-color);
+  text-decoration: underline var(--tertiary-color);
+}
 .section-projects hr {
   border: 0;
   background: var(--secondary-color);

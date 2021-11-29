@@ -15,8 +15,8 @@ const projects = [
     projectDescription:
       'A CLI app built with nodeJS. You can send this to your friends and find out who really knows you.',
     sourceCode:
-      'https://github.com/rahulyadav139/Assignments/blob/main/assignment-2.js',
-    liveLink: 'https://replit.com/@RahulYadav45/Assignment-2?embed=1#index.js',
+      'https://github.com/rahulyadav139/Assignments/blob/main/assignment-1.js',
+    liveLink: 'https://replit.com/@RahulYadav45/Assignment-1?embed=1#index.js',
   },
   {
     code: 'p3',
@@ -24,7 +24,7 @@ const projects = [
     projectDescription:
       "How Much Do You Know About India? Let's play a quiz and see.",
     sourceCode:
-      'https://github.com/rahulyadav139/portfolio/tree/main/applications/minion-translator',
+      'https://github.com/rahulyadav139/Assignments/blob/main/assignment-2.js',
     liveLink: 'https://replit.com/@RahulYadav45/Assignment-2?embed=1#index.js',
   },
   {
