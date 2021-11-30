@@ -5,27 +5,30 @@ const projects = [
     code: 'p2',
     projectName: 'Mark 1: How well do you know me?',
     projectDescription:
-      'A CLI app built with nodeJS. You can send this to your friends and find out who really knows you.',
+      'This is simple CLI quiz application. Quiz is all about me. My friends find out it amazing who know me!!',
     sourceCode:
       'https://github.com/rahulyadav139/Assignments/blob/main/assignment-1.js',
     liveLink: 'https://replit.com/@RahulYadav45/Assignment-1?embed=1#index.js',
+    techStack: 'NodeJS',
   },
   {
     code: 'p3',
     projectName: 'Mark 2: General knowledge quiz?',
     projectDescription:
-      "How Much Do You Know About India? Let's play a quiz and see.",
+      "This is a general knowledge quiz application. Quiz is mexed with easy, medium and hard level question. How Much Do You Know About India? Let's play a quiz and see.",
     sourceCode:
       'https://github.com/rahulyadav139/Assignments/blob/main/assignment-2.js',
     liveLink: 'https://replit.com/@RahulYadav45/Assignment-2?embed=1#index.js',
+    techStack: 'NodeJS',
   },
   {
     code: 'p1',
     projectName: 'Mark 3, 4, 5: My Portfolio',
     projectDescription:
-      'I am managing my portfolio website with using HtML, CSS, Github and Netlify.',
+      'I am managing my portfolio website using HtML, CSS, JavaScript, Github and Netlify.',
     sourceCode: 'https://github.com/rahulyadav139/portfolio',
     liveLink: '',
+    techStack: 'HTML, CSS, JavaScript',
   },
 
   {
@@ -37,6 +40,7 @@ const projects = [
       'https://github.com/rahulyadav139/portfolio/tree/main/applications/minion-translator',
     liveLink:
       'https://rahulmyadav.netlify.app/applications/minion-translator/minion-translator.html',
+    techStack: 'HTML, CSS, JavaScript',
   },
   {
     code: 'p6',
@@ -47,6 +51,7 @@ const projects = [
       'https://github.com/rahulyadav139/portfolio/tree/main/applications/fun-translator',
     liveLink:
       'https://rahulmyadav.netlify.app/applications/fun-translator/translator.html',
+    techStack: 'HTML, CSS, JavaScript',
   },
 
   {
@@ -57,15 +62,17 @@ const projects = [
     sourceCode:
       'https://github.com/rahulyadav139/Assignments/tree/main/emoji-interpreter',
     liveLink: 'https://ky74s.csb.app/',
+    techStack: 'HTML, CSS, ReactJS',
   },
   {
     code: 'p8',
     projectName: 'Mark 9: Recipebook',
     projectDescription:
-      'We are always on the hunt for a good restaurant, and we are also on the hunt for easy-cooking, good meals recipes.',
+      'We are always on the hunt for a good restaurant, and we are also on the hunt for easy-cooking, good meals recipes. This Recipebook application helps you to find recipe with right ingredients and method.',
     sourceCode:
       'https://github.com/rahulyadav139/Assignments/tree/main/recipebook',
     liveLink: 'https://yierz.csb.app/',
+    techStack: 'HTML, CSS, ReactJS',
   },
 
   {
@@ -77,6 +84,7 @@ const projects = [
       'https://github.com/rahulyadav139/portfolio/tree/main/applications/app-cash-register',
     liveLink:
       'https://rahulmyadav.netlify.app/applications/app-cash-register/cash-register.html',
+    techStack: 'HTML, CSS, JavaScript',
   },
   {
     code: 'p11',
@@ -87,6 +95,7 @@ const projects = [
       'https://github.com/rahulyadav139/portfolio/tree/main/applications/lucky-birthday',
     liveLink:
       'https://rahulmyadav.netlify.app/applications/lucky-birthday/lucky-birthday.html',
+    techStack: 'HTML, CSS, JavaScript',
   },
   {
     code: 'p12',
@@ -96,6 +105,7 @@ const projects = [
       'https://github.com/rahulyadav139/portfolio/tree/main/applications/fun-with-triangles',
     liveLink:
       'https://rahulmyadav.netlify.app/applications/fun-with-triangles/angles-to-triangle.html',
+    techStack: 'HTML, CSS, JavaScript',
   },
 
   {
@@ -107,6 +117,7 @@ const projects = [
       'https://github.com/rahulyadav139/portfolio/tree/main/applications/palindrome-birthday',
     liveLink:
       'https://rahulmyadav.netlify.app/applications/palindrome-birthday/palindrome.html',
+    techStack: 'HTML, CSS, JavaScript',
   },
   {
     code: 'p14',
@@ -117,6 +128,7 @@ const projects = [
       'https://github.com/rahulyadav139/portfolio/tree/main/applications/profit-loss-calc',
     liveLink:
       'https://rahulmyadav.netlify.app/applications/profit-loss-calc/profit-loss-calc.html',
+    techStack: 'HTML, CSS, JavaScript',
   },
   {
     code: 'p13',
@@ -127,6 +139,7 @@ const projects = [
       'https://github.com/rahulyadav139/portfolio/tree/main/applications/leap-year',
     liveLink:
       'https://rahulmyadav.netlify.app/applications/leap-year/leap-year.html',
+    techStack: 'HTML, CSS, JavaScript',
   },
 
   {
@@ -137,6 +150,7 @@ const projects = [
       'https://github.com/rahulyadav139/portfolio/tree/main/applications/rock-paper-scissors-game',
     liveLink:
       'https://rahulmyadav.netlify.app/applications/rock-paper-scissors-game/game.html',
+    techStack: 'HTML, CSS, JavaScript',
   },
   {
     code: 'p5',
@@ -146,6 +160,7 @@ const projects = [
     sourceCode:
       'https://github.com/rahulyadav139/Assignments/tree/main/country-flag',
     liveLink: 'https://okwcd.csb.app/',
+    techStack: 'HTML, CSS, ReactJS',
   },
   {
     code: 'p16',
@@ -155,6 +170,7 @@ const projects = [
     sourceCode:
       'https://github.com/rahulyadav139/Assignments/tree/main/emoji-interpreter-v2.0',
     liveLink: 'https://omk9e.csb.app/',
+    techStack: 'HTML, CSS, ReactJS',
   },
 ];
 
@@ -170,6 +186,7 @@ const btnSourceCode = document.querySelector('.button-source-code');
 const btnUp = document.querySelector('.btn-up');
 const blogList = document.querySelector('.section-projects');
 const close = document.querySelector('.close');
+const techStack = document.querySelector('.section-projects__tech-stack');
 
 window.addEventListener('load', () => {
   projects.map(el =>
@@ -189,6 +206,7 @@ function clickHandler() {
 
       projectName.textContent = slectedProject.projectName;
       projectDes.textContent = slectedProject.projectDescription;
+      techStack.textContent = `Tech Stack: ${slectedProject.techStack}`;
 
       if (e.target.id === 'p1') {
         btnLiveProject.style.display = 'none';
