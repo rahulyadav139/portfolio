@@ -3,6 +3,10 @@
   margin: auto;
 }
 
+.blog-para--subtitle {
+  font-weight: bold;
+}
+
 .blog-image img {
   width: 100%;
 }
