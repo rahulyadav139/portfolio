@@ -47,6 +47,8 @@ body {
   margin: 2rem;
   text-align: center;
   box-shadow: 2px 2px 4px 4px black;
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .bubble {
