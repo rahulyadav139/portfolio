@@ -172,6 +172,17 @@ const projects = [
     liveLink: 'https://omk9e.csb.app/',
     techStack: 'HTML, CSS, ReactJS',
   },
+  {
+    code: 'p17',
+    projectName: 'Soundbox',
+    projectDescription:
+      'This soundbox application is good way to play around musical instruments. Each key plays different sound.',
+    sourceCode:
+      'https://github.com/rahulyadav139/portfolio/tree/main/applications/soundbox',
+    liveLink:
+      'https://rahulmyadav.netlify.app/applications/soundbox/index.html ',
+    techStack: 'HTML, CSS, JavaScript',
+  },
 ];
 
 //code
