@@ -19,6 +19,10 @@
   margin: 0;
 }
 
+.blog-title {
+  margin: 0.5rem auto;
+}
+
 .blog-title a {
   text-decoration: underline var(--secondary-color);
   color: var(--secondary-color);

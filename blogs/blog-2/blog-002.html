@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" href="/shared-style.css" />
     <link rel="stylesheet" href="/blogs/blogs-style.css" />
-    <link rel="stylesheet" href="/blogs/blog-1/blog-1-style.css" />
+    <link rel="stylesheet" href="/blogs/blog-2/blog-2-style.css" />
     <script defer src="/portfolio-app.js"></script>
   </head>
   <body>
@@ -187,60 +187,58 @@
         </ul>
       </nav>
       <div class="section-intro">
-        <h2 class="subject-heading">
-          Find smallest integer that have 'n' numbers of factors.
-        </h2>
+        <h2 class="subject-heading">Implement a dark theme on a website</h2>
         <hr />
         <p class="blog-para">
-          What is the factor of a number? Let say a number 'a'. if number 'a' is
-          divisible by let say another number 'b' then we say number 'b' is a
-          factor of number 'a'. Since prime number is only divisible by '1' or
-          number itself so they have only 2 factors. so every integer has more
-          than two factors except prime number and '1'.
+          We live in the modern era where we attract to shiny things but in the
+          case of the web world, a dark theme is much appreciated. It is not
+          just a feature of a website but sometimes it is much of demand. Like
+          when we are reading an article on a website we don't focus on styling
+          or aesthetics. Irrespective we focus on content only. Another fact is
+          that it helps modern devices to run on low power. In sort dark theme
+          is a pretty good feature offer to your customers.
         </p>
+        <p class="blog-para">How to implement a dark theme?</p>
         <p class="blog-para">
-          Let's find factors of a number. In JavaScript we can find easily find
-          factors using 'Remainder Operator'. The remainder operator (%) returns
-          the remainder left over when one operand is divided by a second
-          operand. It always takes the sign of the dividend.
+          For dark theme functionality, we just need to style our website twice.
+          First for the regular version(light theme) and another for the dark
+          theme. For example, for the dark theme, we can set dark color as
+          background and font.
         </p>
         <div class="blog-image">
-          <img src="/blogs/blog-1/images/blog-image-1.png" />
+          <img src="/blogs/blog-2/images/blog-2-image-1.png" />
         </div>
+        <p class="blog-para">How to trigger the dark theme?</p>
         <p class="blog-para">
-          So when one operand is fully divisible by second operand it gives zero
-          remainder. and we can conclude that second operand is the factor of
-          first operand. For finding total factors of a number we need to divide
-          all the number from 1 to till that number and check how many numbers
-          between 1 to that number get 0 remainder. For it we can use for-loop
-          which starts from 1 to that number.
+          For triggering a dark theme to our website we have plenty of options.
+          With the help of JavaScript we can do many ways but the most common
+          one is pushing through a class. In this way first, we need to create a
+          class with all the dark theme characteristics. Then with the help of
+          javascript, we need to push that class to that element (or whole web
+          page) where we want a dark theme.
         </p>
         <div class="blog-image">
-          <img src="/blogs/blog-1/images/blog-image-2.png" />
+          <img src="/blogs/blog-2/images/blog-2-image-2.png" />
         </div>
-        <p>
-          That's how we can find factors of a number. But what if we set factors
-          first and find a number that have that number of factors. For which we
-          need to find a way to increase 'givenNumber' (which is not predefined
-          and set 1 initially ) automatically and check 'factors' value is exact
-          that we defined.
+        <p class="blog-para">Things to remember</p>
+        <p class="blog-para">
+          We need to keep in mind in this process is that we are overwriting the
+          regular theme with the dark theme when we trigger to do that so our
+          class with dark theme characteristics must lie below regular web page
+          styling. So what about when we don't need a dark theme? simple we just
+          that dark theme class from that element.
         </p>
-        <p>
-          You guess the right way we need another loop. Let say we use for-loop
-          again for increment but we don't know what will be final value of
-          counter (in this case 'givenNumber'). We cannot use for-loop. so we
-          are going to use while-loop. So what will be the breaking point of
-          while-loop? We are going to break while loop we get desired number of
-          factors.
+        <iframe
+          title="dark theme demo"
+          margin="auto"
+          src="https://EvergreenBarrenWebmaster.rahulyadav45.repl.co"
+          height="450"
+          width="400"
+        ></iframe>
+        <p class="blog-para">
+          That's how we can implement dark theme functionality to our website.
         </p>
-        <div class="blog-image">
-          <img src="/blogs/blog-1/images/blog-image-3.png" />
-        </div>
-        <p>
-          So that's how we get smallest integer that have specified number of
-          factors. We use for-loop and while-loop. For-loop for finding factors
-          and While-loop for counter increment.
-        </p>
+
         <hr />
       </div>
       <div class="section-projects">
