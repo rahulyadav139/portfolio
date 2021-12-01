@@ -50,4 +50,5 @@ body {
 .clock__hand--hour {
   width: 30%;
   left: calc(20%);
+  background: red;
 }

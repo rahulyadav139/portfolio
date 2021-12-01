@@ -183,6 +183,17 @@ const projects = [
       'https://rahulmyadav.netlify.app/applications/soundbox/index.html ',
     techStack: 'HTML, CSS, JavaScript',
   },
+  {
+    code: 'p18',
+    projectName: 'Analog Clock',
+    projectDescription:
+      "This CSS analog clock helps you to track time. It's a dynamic and elegant looking clock.",
+    sourceCode:
+      'https://github.com/rahulyadav139/portfolio/tree/main/applications/CSS-clock',
+    liveLink:
+      'https://rahulmyadav.netlify.app/applications/CSS-clock/index.html ',
+    techStack: 'HTML, CSS, JavaScript',
+  },
 ];
 
 //code
