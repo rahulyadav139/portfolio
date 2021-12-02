@@ -76,11 +76,18 @@ function submitHandler() {
   const inputWordsArr = input.value.split(' ');
 
   const correctWordsArr = [];
-  for (let word of inputWordsArr) {
-    if (sampleTextArr.includes(word)) {
-      correctWordsArr.push(word);
-    }
-  }
+  // for (let word of inputWordsArr) {
+  //   if (sampleTextArr.includes(word)) {
+  //     correctWordsArr.push(word);
+  //   }
+  // }
+
+  inputWordsArr.forEach(el => {
+    if (sampleTextArr.includes(el)) correctWordsArr.push(el);
+  });
+
+  console.log(input.value);
+  console.log(inputWordsArr);
 
   console.log(correctWordsArr);
   console.log(time);
