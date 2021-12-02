@@ -194,6 +194,17 @@ const projects = [
       'https://rahulmyadav.netlify.app/applications/CSS-clock/index.html ',
     techStack: 'HTML, CSS, JavaScript',
   },
+  {
+    code: 'p19',
+    projectName: 'Typing Master',
+    projectDescription:
+      'What if you could write your e-mails and reports with ease and in half the time? This typing master application helps to improve your typing speed, reduce mistakes, and improve accuracy.',
+    sourceCode:
+      'https://github.com/rahulyadav139/portfolio/tree/main/applications/typing-master',
+    liveLink:
+      'https://rahulmyadav.netlify.app/applications/typing-master/index.html ',
+    techStack: 'HTML, CSS, JavaScript',
+  },
 ];
 
 //code
