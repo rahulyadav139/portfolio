@@ -33,10 +33,8 @@ window.addEventListener('load', () => {
 });
 
 function startHandler() {
-  if (timer) {
-    clearInterval(timer);
-    time = 0;
-  }
+  if (timer) return;
+
   timer = setInterval(() => {
     time++;
     const min = Math.floor(time / 60)
@@ -49,6 +47,7 @@ function startHandler() {
 
   displayStates.forEach(el => (el.style.opacity = 0));
   btnStart.style.backgroundColor = 'red';
+  btnStart.style.cursor = 'default';
 }
 
 function submitHandler() {
@@ -75,6 +74,7 @@ function submitHandler() {
   input.value = '';
   btnStart.style.backgroundColor = 'green';
   btnStart.textContent = 'Restart';
+  btnStart.style.cursor = 'pointer';
 }
 
 btnStart.addEventListener('click', startHandler);
