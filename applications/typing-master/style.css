@@ -16,6 +16,7 @@
   background: linear-gradient(#e66465, #9198e5);
   padding: 0.5rem;
 }
+
 .header,
 .last-row {
   display: flex;
@@ -25,10 +26,13 @@
 .title {
   color: white;
   margin-bottom: 0.5rem;
+  font-weight: bold;
 }
 .btn {
   margin: 0.5rem;
+  cursor: pointer;
 }
+
 .btn,
 .timer {
   width: 5rem;
@@ -39,9 +43,13 @@
   border-radius: 0.5rem;
   box-shadow: 2px 2px 2px 2px black;
   font-size: 1.2rem;
+  font-weight: bold;
 }
 .btn-container {
   display: flex;
+}
+.btn-start {
+  background-color: #dc2626;
 }
 .timer {
   width: 3rem;
