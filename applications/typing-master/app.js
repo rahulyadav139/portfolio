@@ -19,7 +19,7 @@ let timer;
 
 setTimeout(() => {
   sampleTextArr = sampleText.textContent.trim().split(' ');
-}, 80);
+}, 500);
 
 document.addEventListener('keydown', e => {
   const selectedKey = keys.find(el => e.keyCode == el.getAttribute('key-code'));
@@ -47,6 +47,7 @@ function displayTime(time) {
 function startHandler() {
   if (timer) return;
   input.value = '';
+  input.focus();
 
   title.textContent = 'Typing Master';
 
