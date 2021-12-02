@@ -7,6 +7,7 @@ const speedValue = document.querySelector('.speed__value');
 const accuracyValue = document.querySelector('.accuracy__value');
 const btnStart = document.querySelector('.btn-start');
 const displayStates = document.querySelectorAll('.info');
+const title = document.querySelector('.title');
 
 //programming
 
@@ -34,6 +35,7 @@ window.addEventListener('load', () => {
 
 function startHandler() {
   if (timer) return;
+  input.value = '';
 
   timer = setInterval(() => {
     time++;
@@ -51,6 +53,13 @@ function startHandler() {
 }
 
 function submitHandler() {
+  if (!timer) {
+    title.textContent = 'Please start the test first';
+    setTimeout(() => {
+      title.textContent = 'Typing Master';
+    }, 1000);
+    return;
+  }
   clearInterval(timer);
 
   const inputWordsArr = input.value.split(' ');
