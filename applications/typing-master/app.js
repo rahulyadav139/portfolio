@@ -75,7 +75,7 @@ function submitHandler() {
 
   const inputWordsArr = input.value.split(' ');
 
-  const correctWordsArr = [];
+  let correctWordsArr = [];
   // for (let word of inputWordsArr) {
   //   if (sampleTextArr.includes(word)) {
   //     correctWordsArr.push(word);
