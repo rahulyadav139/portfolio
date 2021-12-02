@@ -84,11 +84,14 @@ function submitHandler() {
     }
   }
 
+  console.log(correctWordsArr);
+  console.log(time);
   const accuracy = (correctWordsArr.length / inputWordsArr.length) * 100;
 
   const totalCharacters = correctWordsArr.join('').split('').length;
 
   const speed = totalCharacters / 5 / (time / 60);
+  console.log(totalCharacters);
 
   displayStates.forEach(el => (el.style.opacity = 100));
 
