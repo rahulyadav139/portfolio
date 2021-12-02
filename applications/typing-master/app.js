@@ -22,7 +22,7 @@ setTimeout(() => {
 document.addEventListener('keydown', e => {
   const selectedKey = keys.find(el => e.keyCode == el.getAttribute('key-code'));
 
-  selectedKey.classList.add('bubble');
+  selectedKey?.classList.add('bubble');
 
   setTimeout(() => {
     keys.forEach(el => el.classList.remove('bubble'));
