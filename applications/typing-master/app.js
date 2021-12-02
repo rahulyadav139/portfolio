@@ -33,16 +33,29 @@ window.addEventListener('load', () => {
   sampleText.textContent = `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose injected. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour.`;
 });
 
+function displayTime(time) {
+  const min = Math.floor(time / 60)
+    .toString()
+    .padStart(2, 0);
+  const sec = (time % 60).toString().padStart(2, 0);
+
+  return [min, sec];
+}
+
 function startHandler() {
   if (timer) return;
   input.value = '';
 
+  title.textContent = 'Typing Master';
+
   timer = setInterval(() => {
     time++;
-    const min = Math.floor(time / 60)
-      .toString()
-      .padStart(2, 0);
-    const sec = (time % 60).toString().padStart(2, 0);
+
+    const [min, sec] = displayTime(time);
+    // const min = Math.floor(time / 60)
+    //   .toString()
+    //   .padStart(2, 0);
+    // const sec = (time % 60).toString().padStart(2, 0);
 
     btnStart.textContent = `${min}:${sec}`;
   }, 1000);
@@ -81,7 +94,11 @@ function submitHandler() {
 
   speedValue.textContent = Math.round(speed);
   accuracyValue.textContent = Math.round(accuracy);
-  input.value = '';
+
+  const [min, sec] = displayTime(time);
+
+  title.textContent = `Time: ${min}:${sec}`;
+
   btnStart.style.backgroundColor = 'green';
   btnStart.textContent = 'Restart';
   btnStart.style.cursor = 'pointer';
