@@ -5,7 +5,6 @@ const sampleText = document.querySelector('.sample-text');
 const btnSubmit = document.querySelector('.btn-submit');
 const speedValue = document.querySelector('.speed__value');
 const accuracyValue = document.querySelector('.accuracy__value');
-const displayTimer = document.querySelector('.timer');
 const btnStart = document.querySelector('.btn-start');
 const displayStates = document.querySelectorAll('.info');
 
@@ -45,10 +44,11 @@ function startHandler() {
       .padStart(2, 0);
     const sec = (time % 60).toString().padStart(2, 0);
 
-    displayTimer.textContent = `${min}:${sec}`;
+    btnStart.textContent = `${min}:${sec}`;
   }, 1000);
 
   displayStates.forEach(el => (el.style.opacity = 0));
+  btnStart.style.backgroundColor = 'red';
 }
 
 function submitHandler() {
@@ -73,6 +73,8 @@ function submitHandler() {
   speedValue.textContent = Math.round(speed);
   accuracyValue.textContent = Math.round(accuracy);
   input.value = '';
+  btnStart.style.backgroundColor = 'green';
+  btnStart.textContent = 'Restart';
 }
 
 btnStart.addEventListener('click', startHandler);
