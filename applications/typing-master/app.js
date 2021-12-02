@@ -1,3 +1,5 @@
+'use strict';
+
 const keys = Array.from(document.querySelectorAll('.keys'));
 const spaceKey = document.querySelector('#space');
 const input = document.querySelector('.user-input');
@@ -52,10 +54,6 @@ function startHandler() {
     time++;
 
     const [min, sec] = displayTime(time);
-    // const min = Math.floor(time / 60)
-    //   .toString()
-    //   .padStart(2, 0);
-    // const sec = (time % 60).toString().padStart(2, 0);
 
     btnStart.textContent = `${min}:${sec}`;
   }, 1000);
@@ -78,7 +76,7 @@ function submitHandler() {
   const inputWordsArr = input.value.split(' ');
 
   const correctWordsArr = [];
-  for (word of inputWordsArr) {
+  for (let word of inputWordsArr) {
     if (sampleTextArr.includes(word)) {
       correctWordsArr.push(word);
     }
@@ -99,6 +97,7 @@ function submitHandler() {
   accuracyValue.textContent = Math.round(accuracy);
 
   const [min, sec] = displayTime(time);
+  console.log(min, sec);
 
   title.textContent = `Time: ${min}:${sec}`;
 
