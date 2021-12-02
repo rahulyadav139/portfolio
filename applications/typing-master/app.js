@@ -52,6 +52,7 @@ function startHandler() {
 
 function submitHandler() {
   clearInterval(timer);
+
   const inputWordsArr = input.value.split(' ');
 
   const correctWordsArr = [];
@@ -75,6 +76,7 @@ function submitHandler() {
   btnStart.style.backgroundColor = 'green';
   btnStart.textContent = 'Restart';
   btnStart.style.cursor = 'pointer';
+  timer = time = 0;
 }
 
 btnStart.addEventListener('click', startHandler);
