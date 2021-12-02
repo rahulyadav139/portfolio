@@ -76,27 +76,18 @@ function submitHandler() {
   const inputWordsArr = input.value.split(' ');
 
   let correctWordsArr = [];
-  // for (let word of inputWordsArr) {
-  //   if (sampleTextArr.includes(word)) {
-  //     correctWordsArr.push(word);
-  //   }
-  // }
 
   inputWordsArr.forEach(el => {
     if (sampleTextArr.includes(el)) correctWordsArr.push(el);
   });
 
-  console.log(input.value);
-  console.log(inputWordsArr);
-
-  console.log(correctWordsArr);
-  console.log(time);
   const accuracy = (correctWordsArr.length / inputWordsArr.length) * 100;
 
   const totalCharacters = correctWordsArr.join('').split('').length;
 
+  //reference formula for speed where time is in seconds
+
   const speed = totalCharacters / 5 / (time / 60);
-  console.log(totalCharacters);
 
   displayStates.forEach(el => (el.style.opacity = 100));
 
@@ -104,7 +95,6 @@ function submitHandler() {
   accuracyValue.textContent = Math.round(accuracy);
 
   const [min, sec] = displayTime(time);
-  console.log(min, sec);
 
   title.textContent = `Time: ${min}:${sec}`;
 
