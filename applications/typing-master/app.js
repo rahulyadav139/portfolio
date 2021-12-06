@@ -108,3 +108,5 @@ function submitHandler() {
 btnStart.addEventListener('click', startHandler);
 
 btnSubmit.addEventListener('click', submitHandler);
+
+input.addEventListener('paste', e => e.preventDefault());
