@@ -36,12 +36,12 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .block h2 {
   font-family: 'Permanent Marker', cursive;
   font-size: 2rem;
-  cursor: pointer;
 }
 .row-two {
   border-bottom: 5px solid white;
