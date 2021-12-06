@@ -93,6 +93,7 @@ const checkWinner = function () {
 };
 
 const reset = function () {
+  blocks.forEach(el => el.classList.remove('winner'));
   title.textContent = 'Restart';
   title.style.textDecoration = 'underline';
   title.style.cursor = 'pointer';
