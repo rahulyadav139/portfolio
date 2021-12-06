@@ -93,12 +93,14 @@ const checkWinner = function () {
 };
 
 const reset = function () {
-  blocks.forEach(el => el.classList.remove('winner'));
   title.textContent = 'Restart';
   title.style.textDecoration = 'underline';
   title.style.cursor = 'pointer';
   const clickHandler = function () {
-    blocks.forEach(el => (el.innerHTML = ''));
+    blocks.forEach(el => {
+      el.innerHTML = '';
+      el.classList.remove('winner');
+    });
     title.textContent = 'Tic Tac Toe';
     title.style.cursor = 'default';
     title.style.textDecoration = 'none';
