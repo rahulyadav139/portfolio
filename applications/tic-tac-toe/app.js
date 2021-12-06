@@ -55,6 +55,7 @@ const addHtml = function () {
 };
 
 const compTurn = function () {
+  console.log(blocks[blockNum].innerHTML);
   while (blocks[blockNum].innerHTML) {
     blockNum = Math.floor(Math.random() * 8) + 1;
 
@@ -100,6 +101,7 @@ const reset = function () {
   title.textContent = 'Restart';
   title.style.textDecoration = 'underline';
   title.style.cursor = 'pointer';
+  blockNum = 0;
   const clickHandler = function () {
     blocks.forEach(el => {
       el.innerHTML = '';
