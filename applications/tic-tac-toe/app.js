@@ -55,7 +55,6 @@ const addHtml = function () {
 };
 
 const compTurn = function () {
-  console.log(blocks[blockNum].innerHTML);
   while (blocks[blockNum].innerHTML) {
     blockNum = Math.floor(Math.random() * 8) + 1;
 
