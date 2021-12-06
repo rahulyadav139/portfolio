@@ -122,6 +122,7 @@ blocks.forEach(el =>
       crossScoreValue++;
       crossScore.textContent = `${crossScoreValue}`;
       checkWinner()[1].forEach(el => el.classList.add('winner'));
+      reset();
     }
 
     setTimeout(() => {
@@ -129,6 +130,7 @@ blocks.forEach(el =>
         zeroScoreValue++;
         zeroScore.textContent = `${zeroScoreValue}`;
         checkWinner()[1].forEach(el => el.classList.add('winner'));
+        reset();
       }
     }, 600);
 
