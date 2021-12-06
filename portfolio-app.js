@@ -205,6 +205,17 @@ const projects = [
       'https://rahulmyadav.netlify.app/applications/typing-master/index.html ',
     techStack: 'HTML, CSS, JavaScript',
   },
+  {
+    code: 'p20',
+    projectName: 'Tic Tac Toe',
+    projectDescription:
+      'Tic-tac-toe, noughts and crosses, or Xs and Os is a paper-and-pencil game for two players who take turns marking the spaces in a three-by-three grid with X or O. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row is the winner.',
+    sourceCode:
+      'https://github.com/rahulyadav139/portfolio/tree/main/applications/tic-tac-toe',
+    liveLink:
+      'https://www.rahulyadav.tech/applications/tic-tac-toe/index.html ',
+    techStack: 'HTML, CSS, JavaScript',
+  },
 ];
 
 //code
