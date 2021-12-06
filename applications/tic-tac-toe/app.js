@@ -55,10 +55,13 @@ const addHtml = function () {
 };
 
 const compTurn = function () {
-  for (let turnBlock of blocks) {
+  while (blocks[blockNum].innerHTML) {
     blockNum = Math.floor(Math.random() * 8) + 1;
 
-    if (!blocks[blockNum].innerHTML) break;
+    if (blocks.every(el => el.innerHTML !== '')) {
+      blockNum = 'end';
+      break;
+    }
   }
 };
 
@@ -70,6 +73,7 @@ const onePlayerGame = function (selectedBlock) {
   compTurn();
 
   setTimeout(() => {
+    if (blockNum === 'end') return;
     blocks[blockNum].innerHTML = `<h2 class="block-O">O</h2>`;
   }, 500);
 };
