@@ -216,6 +216,15 @@ const projects = [
       'https://www.rahulyadav.tech/applications/tic-tac-toe/index.html ',
     techStack: 'HTML, CSS, JavaScript',
   },
+  {
+    code: 'p21',
+    projectName: 'Expense Tracker',
+    projectDescription:
+      'Expense Tracker is a simple easy and most user friendly expense manager app. ',
+    sourceCode: 'https://github.com/rahulyadav139/expense-tracker',
+    liveLink: 'https://wonderful-clarke-850fbd.netlify.app/',
+    techStack: 'HTML, CSS, ReactJS',
+  },
 ];
 
 //code
