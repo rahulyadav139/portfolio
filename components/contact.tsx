@@ -1,8 +1,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Navbar } from '@/components/navbar';
-import { Footer } from '@/components/footer';
 import { useState, FormEvent } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -51,12 +49,11 @@ export const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white">
-      <Navbar />
+    <div className="min-h-screen bg-background">
       <main className="container mx-auto px-4 py-24">
         <Link
           href="/"
-          className="inline-flex items-center gap-2 text-gray-500 hover:text-black transition-colors mb-4"
+          className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-4"
         >
           ← Back
         </Link>
@@ -81,7 +78,7 @@ export const Contact = () => {
               <div>
                 <label
                   htmlFor="name"
-                  className="block text-sm font-medium text-gray-700"
+                  className="block text-sm font-medium text-foreground"
                 >
                   Name
                 </label>
@@ -91,7 +88,7 @@ export const Contact = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="mt-1 block w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-gray-900 text-base transition-all duration-200 ease-in-out focus:outline-none focus:border-black focus:ring-2 focus:ring-gray-200 hover:border-gray-300"
+                  className="mt-1 block w-full px-4 py-3 bg-muted border border-border rounded-lg text-foreground text-base transition-all duration-200 ease-in-out focus:outline-none focus:border-border-focused focus:ring-2 focus:ring-ring hover:border-border-focused"
                   placeholder="Your name"
                   required
                 />
@@ -100,7 +97,7 @@ export const Contact = () => {
               <div>
                 <label
                   htmlFor="email"
-                  className="block text-sm font-medium text-gray-700"
+                  className="block text-sm font-medium text-foreground"
                 >
                   Email
                 </label>
@@ -110,7 +107,7 @@ export const Contact = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="mt-1 block w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-gray-900 text-base transition-all duration-200 ease-in-out focus:outline-none focus:border-black focus:ring-2 focus:ring-gray-200 hover:border-gray-300"
+                  className="mt-1 block w-full px-4 py-3 bg-muted border border-border rounded-lg text-foreground text-base transition-all duration-200 ease-in-out focus:outline-none focus:border-border-focused focus:ring-2 focus:ring-ring hover:border-border-focused"
                   placeholder="your.email@example.com"
                   required
                 />
@@ -119,7 +116,7 @@ export const Contact = () => {
               <div>
                 <label
                   htmlFor="message"
-                  className="block text-sm font-medium text-gray-700"
+                  className="block text-sm font-medium text-foreground"
                 >
                   Message
                 </label>
@@ -129,7 +126,7 @@ export const Contact = () => {
                   rows={4}
                   value={formData.message}
                   onChange={handleChange}
-                  className="mt-1 block w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-gray-900 text-base transition-all duration-200 ease-in-out focus:outline-none focus:border-black focus:ring-2 focus:ring-gray-200 hover:border-gray-300"
+                  className="mt-1 block w-full px-4 py-3 bg-muted border border-border rounded-lg text-foreground text-base transition-all duration-200 ease-in-out focus:outline-none focus:border-border-focused focus:ring-2 focus:ring-ring hover:border-border-focused"
                   placeholder="Your message..."
                   required
                 />
@@ -140,20 +137,20 @@ export const Contact = () => {
                 disabled={status === 'loading'}
                 className={`w-full px-6 py-3 rounded-md transition-colors ${
                   status === 'loading'
-                    ? 'bg-gray-400 cursor-not-allowed'
-                    : 'bg-black text-white hover:bg-gray-800'
+                    ? 'bg-muted cursor-not-allowed'
+                    : 'bg-foreground text-background hover:bg-muted-foreground'
                 }`}
               >
                 {status === 'loading' ? 'Sending...' : 'Send Message'}
               </button>
 
               {status === 'success' && (
-                <p className="text-green-600 text-center">
+                <p className="text-success text-center">
                   Message sent successfully!
                 </p>
               )}
               {status === 'error' && (
-                <p className="text-red-600 text-center">
+                <p className="text-destructive text-center">
                   Failed to send message. Please try again.
                 </p>
               )}
@@ -172,7 +169,6 @@ export const Contact = () => {
           </div>
         </motion.div>
       </main>
-      <Footer />
     </div>
   );
 };

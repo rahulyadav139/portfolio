@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
+import { ThemeSwitcher } from './theme-switcher';
 
 export function Navbar() {
   const pathname = usePathname();
@@ -21,8 +22,10 @@ export function Navbar() {
 
   return (
     <motion.header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-gray-200 ${
-        scrolled ? 'bg-white/90 backdrop-blur-sm shadow-sm' : 'bg-transparent'
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-border ${
+        scrolled
+          ? 'bg-background/90 backdrop-blur-sm shadow-sm'
+          : 'bg-transparent'
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -36,17 +39,22 @@ export function Navbar() {
               alt="logo"
               width={32}
               height={32}
+              className="dark:invert"
             />
           </Link>
-
-          <Link
-            href="/contact"
-            className={`font-medium border-b-2 ${
-              pathname === '/contact' ? 'border-black' : 'border-transparent'
-            } hover:border-b-2 hover:border-black transition-all uppercase`}
-          >
-            Contact
-          </Link>
+          <div className="flex items-center gap-4">
+            <Link
+              href="/contact"
+              className={`font-medium border-b-2 ${
+                pathname === '/contact'
+                  ? 'border-foreground'
+                  : 'border-transparent'
+              } hover:border-b-2 hover:border-foreground transition-all uppercase`}
+            >
+              Contact
+            </Link>
+            <ThemeSwitcher />
+          </div>
         </nav>
       </div>
     </motion.header>

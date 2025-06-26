@@ -41,13 +41,13 @@ interface WorkExperienceProps {
 const WorkExperience = ({ experience }: WorkExperienceProps) => {
   return (
     <motion.div
-      className="grid grid-cols-[1fr_1fr_3fr] gap-8 border-t border-gray-200 py-10 "
+      className="grid grid-cols-[1fr_1fr_3fr] gap-8 border-t border-border py-10 "
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 0.6, duration: 0.5 }}
     >
       <div className="flex gap-4">
-        <div className="bg-white/10 rounded-lg w-fit">
+        <div className="bg-background/10 rounded-lg w-fit">
           <Image
             src={`https://img.logo.dev/${experience.website}?token=${API_KEY}&retina=true`}
             alt={experience.company}
@@ -63,7 +63,7 @@ const WorkExperience = ({ experience }: WorkExperienceProps) => {
               href={`https://${experience.website}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm text-gray-400 hover:text-black flex items-center gap-2 transition-colors w-fit"
+              className="text-sm text-muted-foreground hover:text-foreground flex items-center gap-2 transition-colors w-fit"
             >
               {experience.website}
               <ExternalLink className="size-4" />
@@ -73,7 +73,7 @@ const WorkExperience = ({ experience }: WorkExperienceProps) => {
       </div>
       <div className="flex flex-col gap-1">
         <p className="text-base font-medium">{experience.position}</p>
-        <p className="text-sm text-gray-400">
+        <p className="text-sm text-muted-foreground">
           {experience.startDate} - {experience.endDate || 'Present'}
         </p>
       </div>

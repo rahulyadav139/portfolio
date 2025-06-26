@@ -15,7 +15,7 @@ interface ProjectDetailsProps {
 
 export const ProjectDetails = ({ project }: ProjectDetailsProps) => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       <Navbar />
       <main className="container mx-auto px-4 py-24">
         <motion.div
@@ -25,7 +25,7 @@ export const ProjectDetails = ({ project }: ProjectDetailsProps) => {
         >
           <Link
             href="/"
-            className="inline-flex items-center gap-2 text-gray-500 hover:text-black transition-colors mb-4"
+            className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-4"
           >
             ← Back
           </Link>
@@ -40,14 +40,14 @@ export const ProjectDetails = ({ project }: ProjectDetailsProps) => {
                 {project.skills.map((skill, index) => (
                   <span
                     key={index}
-                    className="text-sm bg-gray-100 px-3 py-1 rounded-full"
+                    className="text-sm bg-muted px-3 py-1 rounded-full"
                   >
                     {skill}
                   </span>
                 ))}
               </div>
               {/* project description */}
-              <p className="text-md leading-7 text-gray-600 whitespace-pre-line mb-6">
+              <p className="text-md leading-7 text-muted-foreground whitespace-pre-line mb-6">
                 {project.description}
               </p>
 
@@ -56,7 +56,7 @@ export const ProjectDetails = ({ project }: ProjectDetailsProps) => {
                 {project.github && (
                   <Link
                     href={project.github}
-                    className="flex items-center gap-2 border border-black px-4 py-2 rounded-md hover:bg-gray-100 transition-colors"
+                    className="flex items-center gap-2 border border-border px-4 py-2 rounded-md hover:bg-muted transition-colors"
                   >
                     <FaGithub className="w-5 h-5" />
                     Github
@@ -64,7 +64,7 @@ export const ProjectDetails = ({ project }: ProjectDetailsProps) => {
                 )}
                 <Link
                   href={project?.url || ''}
-                  className="flex items-center gap-2 bg-black text-white px-8 py-2 rounded-md hover:bg-gray-800 transition-colors"
+                  className="flex items-center gap-2 bg-foreground text-background px-8 py-2 rounded-md hover:bg-muted-foreground transition-colors"
                 >
                   Live
                   <ArrowRight className="w-5 h-5" />

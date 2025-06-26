@@ -81,7 +81,7 @@ export const About = () => {
             {/* <div className="mt-8">
               <Link
                 href="/work"
-                className="text-lg font-medium border-b-2 border-black pb-1 hover:border-pink-500 transition-colors"
+                className="text-lg font-medium border-b-2 border-foreground pb-1 hover:border-primary transition-colors"
               >
                 View my work →
               </Link>
@@ -97,7 +97,7 @@ export const About = () => {
               priority
             />
             {/* <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-24 h-24 md:w-32 md:h-32 rounded-full border-4 border-white"></div>
+                <div className="w-24 h-24 md:w-32 md:h-32 rounded-full border-4 border-background"></div>
               </div> */}
           </div>
         </motion.div>

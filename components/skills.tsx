@@ -35,9 +35,9 @@ export const Skills = () => {
               <TooltipContent
                 side="bottom"
                 sideOffset={10}
-                className="bg-black text-white p-2 rounded-md text-xs relative"
+                className="bg-foreground text-background p-2 rounded-md text-xs relative"
               >
-                <div className="absolute -top-1 left-1/2 -translate-x-1/2 border-[5px] bg-black rotate-45" />
+                <div className="absolute -top-1 left-1/2 -translate-x-1/2 border-[5px] border-foreground rotate-45" />
                 {skill.name}
               </TooltipContent>
             </Tooltip>
