@@ -11,5 +11,13 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
+  rewrites: async () => {
+    return [
+      {
+        source: '/projects',
+        destination: '/',
+      },
+    ];
+  },
 };
 export default nextConfig;

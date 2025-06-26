@@ -1,0 +1,89 @@
+[
+  {
+    "id": "palasio-bank",
+    "title": "Banking App",
+    "categories": ["UI / UX / Development"],
+    "type": "Web app",
+    "image": "/images/palasio-bank.png",
+    "description": "Palasio Bank is a simulator application that replicates the features of a real net banking portal, allowing users to experience digital banking in a safe and controlled environment. Designed for training, education, and testing purposes, it offers a realistic interface where users can perform common banking tasks without using real money.\n\nKey features include money transfers, bill payments, password changes, and account management—mirroring the functionality of actual online banking systems. Users can explore transaction flows, manage virtual accounts, and navigate a user-friendly interface that closely resembles real banking portals.",
+    "slug": "palasio-bank",
+    "url": "https://palasio-bank.vercel.app/",
+    "github": "https://github.com/your-username/palasio-bank",
+    "skills": [
+      "ReactJS",
+      "Redux",
+      "MongoDB",
+      "Mongoose ODM",
+      "ExpressJS",
+      "NodeJS",
+      "REST API",
+      "JWT Authentication"
+    ]
+  },
+  {
+    "id": "social-links",
+    "title": "Social Links",
+    "categories": ["UI / UX / Development"],
+    "type": "Web app",
+    "image": "/images/social-links.png",
+    "description": "Social Link is a personal project that serves as a streamlined platform for sharing multiple social media profiles, project links, and portfolio pages through a single, customizable link. Inspired by Linktree, Social Link allows users to create a clean and organized digital hub where all their important links are easily accessible.\n\nThe application is designed with simplicity and user experience in mind. Users can quickly set up their profile, add or remove links, and customize the appearance to match their personal brand or style. Whether you're a content creator, developer, freelancer, or professional, Social Link offers a convenient way to consolidate your online presence and share it with others through just one URL.",
+    "slug": "social-links",
+    "url": "https://nolito.vercel.app/",
+    "github": "https://github.com/your-username/social-links",
+    "skills": [
+      "ReactJS",
+      "Redux",
+      "Firebase",
+      "Firebase real-time Database",
+      "Firebase Authentication"
+    ]
+  },
+  {
+    "id": "component-library",
+    "title": "Component Library",
+    "categories": ["UI / Design System / Development"],
+    "type": "Website",
+    "image": "/images/palasio-designs.png",
+    "description": "Palasio Designs is a component library that offers a collection of reusable and responsive UI components, crafted to streamline the web development process. It provides developers and designers with ready-to-use elements such as buttons, cards, navigation bars, and forms, all designed with consistency and clean structure in mind.\n\nEach component includes its corresponding HTML source code, making it easy to copy, customize, and integrate into any project. Whether you're building a website, portfolio, or dashboard, Palasio Designs helps you save time and maintain design quality across your projects with minimal effort.",
+    "slug": "component-library",
+    "url": "https://synapse.vercel.app/",
+    "github": "https://github.com/your-username/component-library",
+    "skills": ["HTML5", "CSS3", "Responsive Design"]
+  },
+  {
+    "id": "quiz-app",
+    "title": "Quiz App",
+    "categories": ["UI / UX / Development"],
+    "type": "Web app",
+    "image": "/images/palasio-quiz.png",
+    "description": "The GK Quiz App is a feature-rich application designed to test and improve users' general knowledge through engaging quizzes. It allows users to create individual accounts, track their progress, and access personalized dashboards that display quiz history and performance analytics. The intuitive interface ensures a smooth and interactive experience for users of all ages.\n\nEach quiz provides instant feedback, and detailed results are shown at the end, helping users identify strengths and areas for improvement. Whether you're preparing for competitive exams or just love learning new facts, this app offers a smart and structured way to sharpen your knowledge.",
+    "slug": "quiz-app",
+    "url": "https://synergies.vercel.app/",
+    "github": "https://github.com/your-username/quiz-app",
+    "skills": [
+      "NextJS",
+      "MongoDB",
+      "Server-side Authentication with Next-session"
+    ]
+  },
+  {
+    "id": "e-commerce-website",
+    "title": "E-commerce Website",
+    "categories": ["UI / UX / Development"],
+    "type": "Web app",
+    "image": "/images/palasio-lane.png",
+    "description": "The Palasio E-commerce Website is a comprehensive online shopping platform designed to provide users with a seamless and efficient shopping experience. It features a user-friendly interface, product listings, shopping cart functionality, and secure payment processing. The website is built with modern web technologies and is optimized for both desktop and mobile devices, ensuring a smooth and intuitive browsing experience.\n\nWith a focus on user experience and security, the Palasio E-commerce Website offers a reliable and convenient way to shop online, making it an ideal solution for both individual buyers and businesses looking to expand their reach.",
+    "slug": "e-commerce-website",
+    "url": "https://palasio-ecommerce.vercel.app/",
+    "github": "https://github.com/your-username/e-commerce-website",
+    "skills": [
+      "ReactJS",
+      "MongoDB",
+      "Mongoose ODM",
+      "ExpressJS",
+      "NodeJS",
+      "REST API",
+      "JWT Authentication"
+    ]
+  }
+]

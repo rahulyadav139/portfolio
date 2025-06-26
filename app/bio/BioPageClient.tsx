@@ -1,9 +1,9 @@
-"use client"
+'use client';
 
-import Image from "next/image"
-import { motion } from "framer-motion"
-import { Navbar } from "@/components/navbar"
-import { Footer } from "@/components/footer"
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { Navbar } from '@/components/navbar';
+import { Footer } from '@/components/footer';
 
 export default function BioPageClient() {
   return (
@@ -26,10 +26,14 @@ export default function BioPageClient() {
               Hey!
             </motion.h1>
 
-            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4, duration: 0.5 }}>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.4, duration: 0.5 }}
+            >
               <h2 className="text-2xl font-medium mb-6">
-                Design by <span className="italic">Your Name</span>, a designer based in London, currently part of the
-                design team at ©Studio.
+                Design by <span className="italic">Your Name</span>, a designer
+                based in London, currently part of the design team at ©Studio.
               </h2>
             </motion.div>
           </div>
@@ -41,7 +45,13 @@ export default function BioPageClient() {
             className="relative"
           >
             <div className="relative w-full aspect-square rounded-md overflow-hidden">
-              <Image src="/placeholder.svg" alt="Profile" fill className="object-cover" priority />
+              <Image
+                src="https://fastly.picsum.photos/id/686/536/354.jpg?hmac=nQKjRmIoZtUkWvI-wNF8RFNW89VHuPIPT2muuPPL3QY"
+                alt="Profile"
+                fill
+                className="object-cover"
+                priority
+              />
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-32 h-32 md:w-48 md:h-48 rounded-full border-4 border-white"></div>
               </div>
@@ -56,21 +66,25 @@ export default function BioPageClient() {
           transition={{ delay: 0.6, duration: 0.5 }}
         >
           <p className="text-lg mb-6">
-            I am a UI/UX designer with over 6 years of experience. I have won multiple international awards and had the
-            privilege of collaborating with major companies like Studio, Brand, and Tech.
+            I am a UI/UX designer with over 6 years of experience. I have won
+            multiple international awards and had the privilege of collaborating
+            with major companies like Studio, Brand, and Tech.
           </p>
           <p className="text-lg mb-6">
-            My work focuses on combining creativity and functionality to deliver exceptional user experiences while
-            enhancing business performance. With a rich portfolio and a passion for innovation, I continue to contribute
-            to impactful digital design solutions.
+            My work focuses on combining creativity and functionality to deliver
+            exceptional user experiences while enhancing business performance.
+            With a rich portfolio and a passion for innovation, I continue to
+            contribute to impactful digital design solutions.
           </p>
           <p className="text-lg">
-            I specialize in creating intuitive interfaces that not only look beautiful but also solve real problems for
-            users. My approach combines research, strategy, and creativity to build products that people love to use.
+            I specialize in creating intuitive interfaces that not only look
+            beautiful but also solve real problems for users. My approach
+            combines research, strategy, and creativity to build products that
+            people love to use.
           </p>
         </motion.div>
       </main>
       <Footer />
     </div>
-  )
+  );
 }

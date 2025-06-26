@@ -42,7 +42,7 @@ export default function ClientPage() {
 
             <motion.div
               className="grid md:grid-cols-2 gap-12 mt-12"
-              initial={{ opacity: 0 }}
+              initial={{ opacity: 0, border: '1px solid blue' }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.7, duration: 0.5 }}
             >
@@ -64,7 +64,7 @@ export default function ClientPage() {
               <div>
                 <div className="relative w-full aspect-square rounded-md overflow-hidden">
                   <Image
-                    src="/placeholder.svg"
+                    src="https://fastly.picsum.photos/id/686/536/354.jpg?hmac=nQKjRmIoZtUkWvI-wNF8RFNW89VHuPIPT2muuPPL3QY"
                     alt="Profile"
                     fill
                     className="object-cover"
@@ -79,6 +79,7 @@ export default function ClientPage() {
           </motion.div>
         </section>
 
+        {/* footer */}
         <motion.section
           className="bg-black text-white py-24"
           initial={{ opacity: 0 }}
