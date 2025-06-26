@@ -5,7 +5,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: NextRequest) {
   try {
-    const { name, email, message, to } = await request.json();
+    const { name, email, message } = await request.json();
 
     // Validate required fields
     if (!name || !email || !message) {
@@ -27,7 +27,7 @@ export async function POST(request: NextRequest) {
     // Send email using Resend
     const { data, error } = await resend.emails.send({
       from: 'Portfolio Contact <noreply@rahulyadav.dev>',
-      to: [to || 'contact@rahulyadav.dev'],
+      to: ['contact@rahulyadav.dev'],
       subject: `New Contact Form Submission from ${name}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">

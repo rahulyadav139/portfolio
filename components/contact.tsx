@@ -3,14 +3,15 @@
 import { motion } from 'framer-motion';
 import { useState, FormEvent } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
+
+const initialFormData = {
+  name: '',
+  email: '',
+  message: '',
+};
 
 export const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
+  const [formData, setFormData] = useState(initialFormData);
   const [status, setStatus] = useState<
     'idle' | 'loading' | 'success' | 'error'
   >('idle');
@@ -18,7 +19,10 @@ export const Contact = () => {
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setFormData(prev => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
   };
 
   const handleSubmit = async (e: FormEvent) => {
@@ -31,10 +35,7 @@ export const Contact = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-          ...formData,
-          to: 'contact@rahulyadav.dev',
-        }),
+        body: JSON.stringify(formData),
       });
 
       if (!response.ok) {
@@ -42,7 +43,7 @@ export const Contact = () => {
       }
 
       setStatus('success');
-      setFormData({ name: '', email: '', message: '' });
+      setFormData(initialFormData);
     } catch {
       setStatus('error');
     }
@@ -155,17 +156,6 @@ export const Contact = () => {
                 </p>
               )}
             </form>
-          </div>
-          <div className="p-15 pt-0">
-            <div className="relative aspect-square rounded-md overflow-hidden">
-              <Image
-                src="/images/send-email.png"
-                alt="Contact illustration"
-                fill
-                className="object-contain"
-                priority
-              />
-            </div>
           </div>
         </motion.div>
       </main>
