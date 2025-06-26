@@ -1,0 +1,23 @@
+{
+  "name": "Rahul Yadav",
+  "title": "Fullstack Developer",
+  "company": "GrowthX",
+  "displayPicture": "/images/display-picture.webp",
+  "about": "I build user interfaces that marry creativity with performance, creating seamless experiences that captivate users and drive business growth. Fueled by a passion for modern web technologies, I build frontend architectures that are both scalable and maintainable.\n\nI specialize in building intuitive, user-focused interfaces that solve real-world problems and scale with business needs. My approach blends thoughtful UX, performance-driven development, and a deep understanding of product goals.",
+  "email": "contact@rahulyadav.dev",
+  "website": "https://rahulyadav.dev",
+  "image": "/images/display-picture.webp",
+  "socialLinks": {
+    "github": "https://github.com/rahulyadav139",
+    "linkedin": "https://www.linkedin.com/in/techrahul",
+    "twitter": "https://x.com/rahul_m_yadav"
+  },
+  "tagline": {
+    "line1": "Frontend that Performs.",
+    "line2": "Products that Grow."
+  },
+  "seo": {
+    "title": "Rahul Yadav - Frontend Developer",
+    "description": "I'm Rahul Yadav, a frontend developer crafting seamless web experiences at ©GrowthX."
+  }
+}
