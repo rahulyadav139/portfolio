@@ -12,14 +12,14 @@ import { Tooltip } from '@radix-ui/react-tooltip';
 export const Skills = () => {
   return (
     <section className="container mx-auto px-4 py-16">
-      <motion.h1
+      <motion.h2
         className="text-7xl md:text-8xl font-bold mb-16"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
         Skills
-      </motion.h1>
+      </motion.h2>
       <motion.div
         className="flex flex-wrap gap-6 [&_svg]:w-10 [&_svg]:h-10"
         initial={{ opacity: 0 }}

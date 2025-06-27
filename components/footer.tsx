@@ -16,11 +16,11 @@ export function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
           <div>
-            <h2 className="text-5xl md:text-6xl font-bold mb-8">
+            <p className="text-5xl md:text-6xl font-bold mb-8">
               {profile.tagline.line1}
               <br />
               {profile.tagline.line2}
-            </h2>
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

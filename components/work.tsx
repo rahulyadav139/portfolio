@@ -12,14 +12,14 @@ const API_KEY = process.env.NEXT_PUBLIC_LOGO_API_KEY;
 export const Work = () => {
   return (
     <section className="container mx-auto px-4 py-12">
-      <motion.h1
+      <motion.h2
         className="text-7xl md:text-8xl font-bold mb-16"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
         Work
-      </motion.h1>
+      </motion.h2>
       <motion.div
         className="flex flex-wrap gap-6"
         initial={{ opacity: 0 }}

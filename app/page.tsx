@@ -5,15 +5,11 @@ import { Work } from '@/components/work';
 
 export default function Home() {
   return (
-    <>
-      <div className="min-h-screen bg-background">
-        <main>
-          <About />
-          <Skills />
-          <Work />
-          <Projects />
-        </main>
-      </div>
-    </>
+    <main>
+      <About />
+      <Skills />
+      <Work />
+      <Projects />
+    </main>
   );
 }

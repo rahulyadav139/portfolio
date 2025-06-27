@@ -1,6 +1,6 @@
 import type React from 'react';
 import type { Metadata } from 'next/dist/lib/metadata/types/metadata-interface';
-import { Inter } from 'next/font/google';
+import { Alegreya } from 'next/font/google';
 import './globals.css';
 import profile from '@/assets/profile.json';
 import { ThemeProvider } from '@/contexts/theme-context';
@@ -8,7 +8,10 @@ import { cn } from '@/lib/utils';
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
 
-const inter = Inter({ subsets: ['latin'] });
+const alegreya = Alegreya({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+});
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -30,7 +33,7 @@ const jsonLd = {
 };
 
 export const metadata: Metadata = {
-  title: profile.name,
+  title: profile.seo.title,
   description: profile.seo.description,
   openGraph: {
     type: 'website',
@@ -98,15 +101,17 @@ export default function RootLayout({ children }: RootLayoutProps) {
       </head>
       <body
         className={cn(
-          inter.className,
+          alegreya.className,
           'bg-white text-zinc-900 antialiased dark:bg-zinc-900 dark:text-white'
         )}
       >
-        <ThemeProvider>
-          <Navbar />
-          {children}
-          <Footer />
-        </ThemeProvider>
+        <div className="min-h-screen bg-background">
+          <ThemeProvider>
+            <Navbar />
+            {children}
+            <Footer />
+          </ThemeProvider>
+        </div>
       </body>
     </html>
   );
